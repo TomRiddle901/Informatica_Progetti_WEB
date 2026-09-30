@@ -2,6 +2,11 @@
 let emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let codiceFiscaleRegEx = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/;
 
+// Visualizza il form se JS è caricato
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("JS").style.display = "block";
+});
+
 function convalidaEmail(){
     let email = document.getElementById('inputEmail').value;
 
@@ -15,7 +20,7 @@ function convalidaEmail(){
 function convalidaCodiceFiscale(){
     let codiceFiscale = document.getElementById('inputCodFiscale').value;
 
-    codiceFiscale.toUpperCase(); // Trasforma il codice fiscale tutto in maiuscolo
+    codiceFiscale = codiceFiscale.toUpperCase(); // Trasforma il codice fiscale tutto in maiuscolo
 
     if (codiceFiscale.match(codiceFiscaleRegEx) && codiceFiscale !== ""){
         return true;
@@ -73,8 +78,7 @@ function convalidaHobby(){
     }
 }
 
-document.getElementById("btnInvia").addEventListener("click", (e)=>{
-    e.preventDefault();
+function convalidaForm(){
 
     let messaggioErrore = "";
     if (!convalidaEmail()){
@@ -101,4 +105,4 @@ document.getElementById("btnInvia").addEventListener("click", (e)=>{
     }else{
         alert("form inviato correttamente!")
     }
-});
+}
