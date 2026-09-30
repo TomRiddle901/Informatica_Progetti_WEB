@@ -103,7 +103,12 @@ function convalidaForm(e){
 
     if (messaggioErrore.length > 0){
         alert(messaggioErrore);
-    }else{
+    }else {
         alert("Form inviato correttamente!");
+        resetForm();
     }
+}
+
+function resetForm(){
+    document.getElementById('formJs').reset();
 }
