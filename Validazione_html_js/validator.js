@@ -1,5 +1,5 @@
 // RegEx
-let emailRegEx = /^[^\s@]+@[^\s@]+\.[\^s@]+$/;
+let emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let codiceFiscaleRegEx = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/;
 
 function convalidaEmail(){
