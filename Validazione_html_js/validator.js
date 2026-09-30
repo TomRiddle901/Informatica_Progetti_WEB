@@ -43,3 +43,15 @@ function convalidaSelect(){
         return true;
     }
 }
+
+function convalidaSesso() {
+    let opzioni = document.getElementsByName("sesso");
+
+    for (let i = 0; i < opzioni.length; i++) {
+        if (opzioni[i].checked) {
+            return true; // Trovato uno selezionato
+        }
+    }
+
+    return false; // Nessuno è stato selezionato
+}
