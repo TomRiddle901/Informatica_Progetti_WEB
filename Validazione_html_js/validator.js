@@ -55,3 +55,20 @@ function convalidaSesso() {
 
     return false; // Nessuno è stato selezionato
 }
+
+function convalidaHobby(){
+    let checkbox = document.getElementsByName("hobby");
+    let selezionati = 0;
+
+    for (let i = 0; i < checkbox.length; i++){
+        if (checkbox[i].checked){
+            selezionati++;
+        }
+    }
+
+    if (selezionati >= 2){
+        return true;
+    }else{
+        return false;
+    }
+}
