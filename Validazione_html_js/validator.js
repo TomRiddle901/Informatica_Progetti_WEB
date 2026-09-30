@@ -34,7 +34,7 @@ function convalidaPartitaIVA(){
     }
 }
 
-function convalidaSelect(){
+function convalidaTipo(){
     let valoreSelect = document.getElementById('selectTipo').value;
 
     if (valoreSelect === "default"){
@@ -72,3 +72,33 @@ function convalidaHobby(){
         return false;
     }
 }
+
+document.getElementById("btnInvia").addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    let messaggioErrore = "";
+    if (!convalidaEmail()){
+        messaggioErrore += "Email incorretta! ";
+    }
+    if (!convalidaCodiceFiscale()){
+        messaggioErrore += "Codice Fiscale incorretto! ";
+    }
+    if (!convalidaPartitaIVA()){
+        messaggioErrore += "Partita IVA incorretta! ";
+    }
+    if (!convalidaTipo()){
+        messaggioErrore += "Devi selezionare una tipologia valida! ";
+    }
+    if (!convalidaSesso()){
+        messaggioErrore += "Inserisci il sesso! ";
+    }
+    if (!convalidaHobby()){
+        messaggioErrore += "Inserisci almeno 2 hobby!"
+    }
+
+    if (messaggioErrore.length > 0){
+        alert(messaggioErrore);
+    }else{
+        alert("form inviato correttamente!")
+    }
+});
