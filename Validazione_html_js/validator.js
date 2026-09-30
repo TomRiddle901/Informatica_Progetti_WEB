@@ -32,7 +32,7 @@ function convalidaCodiceFiscale(){
 function convalidaPartitaIVA(){
     let pIva = document.getElementById('inputPIva').value;
 
-    if (pIva.length < 11){
+    if (pIva.length !== 11){
         return false;
     }else{
         return true;
@@ -78,7 +78,8 @@ function convalidaHobby(){
     }
 }
 
-function convalidaForm(){
+function convalidaForm(e){
+    e.preventDefault(); // Evita di ricaricare la pagina quando appare un alert
 
     let messaggioErrore = "";
     if (!convalidaEmail()){
@@ -97,12 +98,12 @@ function convalidaForm(){
         messaggioErrore += "Inserisci il sesso! ";
     }
     if (!convalidaHobby()){
-        messaggioErrore += "Inserisci almeno 2 hobby!"
+        messaggioErrore += "Inserisci almeno 2 hobby! ";
     }
 
     if (messaggioErrore.length > 0){
         alert(messaggioErrore);
     }else{
-        alert("form inviato correttamente!")
+        alert("Form inviato correttamente!");
     }
 }
