@@ -8,6 +8,7 @@
             display: none;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
         function verificaJs(){
             document.getElementById('JS').style.display="inline";
@@ -20,18 +21,34 @@
     </header>
     <div id="">
         <form id="formJs">
-            <p>Email: <input type="email" id="inputEmail"/></p>
-            <p>Codice Fiscale: <input type="text" id="inputCodFiscale"/></p>
-            <p>Partita IVA: <input type="text" id="inputPIva"/></p>
-            <p>Selezionare il tipo <select id="selectTipo"></select></p>
-            <p>Sesso</p>
-            <input type="radio" id="inputRadSesso1" value="1" name="sesso">Maschio
-            <br>
-            <input type="radio" id="inputRadSesso2" value="2" name="sesso">Femmina
-            <p>Selezionare almeno 2 hobbies</p>
-            <input type="checkbox" id="hobby1" name="hobby">Pesca<br>
-            <input type="checkbox" id="hobby2" name="hobby">Uncinetto<br>
-            <input type="checkbox" id="hobby3" name="hobby">Scacchi<br>
+            <label id="inputLbl">
+                Email:
+                <input type="email" id="inputEmail"/>
+            </label>
+            <label id="codFiscLbl">
+                Codice Fiscale:
+                <input type="text" id="inputCodFiscale"/>
+            </label>
+            <label id="inputPIvaLbl">
+                Partita IVA:
+                <input type="text" id="inputPIva"/>
+            </label>
+            <label id="selectTipoLbl">
+                Selezionare il tipo
+                <select id="selectTipo"></select><br>
+            </label>
+            <label id="inputRadioLbl">
+                Sesso
+                <input type="radio" id="inputRadSesso1" value="1" name="sesso">Maschio
+                <br>
+                <input type="radio" id="inputRadSesso2" value="2" name="sesso">Femmina
+            </label>
+            <label id="inputCheckboxLbl">
+                Selezionare almeno 2 hobbies<br>
+                <input type="checkbox" id="hobby1" name="hobby">Pesca<br>
+                <input type="checkbox" id="hobby2" name="hobby">Uncinetto<br>
+                <input type="checkbox" id="hobby3" name="hobby">Scacchi<br>
+            </label>
             <button type="button" id="invia">Invia</button>
         </form>
     </div>
