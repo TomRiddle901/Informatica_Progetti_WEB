@@ -1,4 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Thaoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+header{
+    margin-bottom: 25px;
+}
+
+header h1{
+    font-size: 24px;
+}
+
+#JS, #noJS{
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px;
+}
+
+#noJS h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 label{
-    display: block;
-    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 6px;
+}
+
+input[type="email"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+select:focus {
+    box-shadow: 0 0 0 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
 }
