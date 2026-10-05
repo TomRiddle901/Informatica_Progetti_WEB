@@ -50,15 +50,12 @@ function convalidaTipo(){
 
 // Funzione per convalidare il sesso
 function convalidaSesso() {
-    let opzioni = document.getElementsByName("sesso");
-
-    for (let i = 0; i < opzioni.length; i++) {
-        if (opzioni[i].checked) {
-            return true; // Trovato uno selezionato
-        }
-    }
-
-    return false; // Nessuno è stato selezionato
+    return $("input[name='inputSesso']:checked").length > 0;
+    /* Prende solo l'elemento radio di nome 'inputSesso' che è selezionato dall'utente
+    * il .lenght restituisce 0 o 1:
+    * 0 sta per non selezionato
+    * 1 sta per selezionato
+    * quindi se è seleionato (.length > 0) ritorna true*/
 }
 
 // Funzione jQuery
