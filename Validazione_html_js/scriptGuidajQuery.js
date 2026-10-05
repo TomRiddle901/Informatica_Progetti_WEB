@@ -26,5 +26,27 @@ $(document).ready(function(){
         $("#"+infoID+" p").slideToggle(); // In base all'infoID (che corrisponde all'id dei DIV) esegue lo slideToggle sul riquatro giusto
     });*/
 
+    $("li").css({ // Testo nero su tutta la lista
+        'color': 'black'
+    });
 
+    // Seleziona il primo elemento della lista e coloralo di rosso
+    $("li").first().css({
+        'color': 'red'
+    });
+
+    // Seleziona l'ultimo elemento della lista e coloralo di rosso
+    $("li").last().css({
+        'color': 'red'
+    });
+
+    // Seleziona il sesto elemento della lista e coloralo di verde
+    $("li").eq(6).css({
+        'color': 'green'
+    });
+
+    // Seleziona tutta la sottolista
+    $(".sotto-lista li").css({
+        'color': 'blue'
+    });
 });
