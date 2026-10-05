@@ -89,9 +89,10 @@ function convalidaForm(){
 
     if (messaggioErrore.length > 0){
         alert(messaggioErrore);
+        return false;
     }else {
         alert("Form inviato correttamente!");
-        resetForm();
+        return true;
     }
 }
 
@@ -101,8 +102,11 @@ $(document).ready(function(){
     $("#JS").show();
 
     // Quando viene premuto il pulsante mostra un alert
-    $("#inviaFormBtn").on('click', function(){
-        $("#formJs").trigger('reset'); // Reset del form
-        alert("Form inviato correttamente!");
+    $("#inviaFormBtn").on('click', function(e){
+        e.preventDefault(); // Evita che la pagina si ricarica se qualcosa va storto
+
+        if (convalidaForm()){
+            $("#formJs").trigger('reset'); // Reset del form
+        }
     });
 });
