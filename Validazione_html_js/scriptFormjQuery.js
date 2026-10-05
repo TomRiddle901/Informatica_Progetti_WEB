@@ -37,6 +37,17 @@ function convalidaPartitaIVA(){
     }
 }
 
+// Funzione per convalidare la select del tipo
+function convalidaTipo(){
+    let valoreSelect = document.getElementById('selectTipo').value;
+
+    if (valoreSelect === "default"){
+        return false;
+    }else{
+        return true;
+    }
+}
+
 // Funzione jQuery
 $(document).ready(function(){
     // Visualizza il form quando si carica il JS
