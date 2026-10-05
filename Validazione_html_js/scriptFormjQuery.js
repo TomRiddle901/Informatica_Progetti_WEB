@@ -28,7 +28,7 @@ function convalidaCodiceFiscale(){
 
 // Funzione per convalidare la partita IVA
 function convalidaPartitaIVA(){
-    let pIva = document.getElementById('inputPIva').value;
+    let pIva = $("#inputPIva").val();
 
     if (pIva.length !== 11){
         return false;
