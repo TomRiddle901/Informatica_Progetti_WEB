@@ -58,22 +58,10 @@ function convalidaSesso() {
     * quindi se è seleionato (.length > 0) ritorna true*/
 }
 
-// Funzione per convalidare le checkbox
+// Funzione per convalidare le checkbox degli hobby
 function convalidaHobby(){
-    let checkbox = document.getElementsByName("hobby");
-    let selezionati = 0;
-
-    for (let i = 0; i < checkbox.length; i++){
-        if (checkbox[i].checked){
-            selezionati++;
-        }
-    }
-
-    if (selezionati >= 2){
-        return true;
-    }else{
-        return false;
-    }
+    return $("input[name='hobby']:checked").length > 2;
+    // Stessa idea della convalida del sesso
 }
 
 // Funzione jQuery
