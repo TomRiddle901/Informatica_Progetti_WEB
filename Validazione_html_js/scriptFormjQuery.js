@@ -65,8 +65,7 @@ function convalidaHobby(){
 }
 
 // Funzione per convalidare il form
-function convalidaForm(e){
-    e.preventDefault(); // Evita di ricaricare la pagina quando appare un alert
+function convalidaForm(){
 
     let messaggioErrore = "";
     if (!convalidaEmail()){
