@@ -58,6 +58,24 @@ function convalidaSesso() {
     * quindi se è seleionato (.length > 0) ritorna true*/
 }
 
+// Funzione per convalidare le checkbox
+function convalidaHobby(){
+    let checkbox = document.getElementsByName("hobby");
+    let selezionati = 0;
+
+    for (let i = 0; i < checkbox.length; i++){
+        if (checkbox[i].checked){
+            selezionati++;
+        }
+    }
+
+    if (selezionati >= 2){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 // Funzione jQuery
 $(document).ready(function(){
     // Visualizza il form quando si carica il JS
@@ -65,7 +83,7 @@ $(document).ready(function(){
 
     // Quando viene premuto il pulsante mostra un alert
     $("#inviaFormBtn").on('click', function(){
-        $("#formJs").trigger('reset');
+        $("#formJs").trigger('reset'); // Reset del form
         alert("Form inviato correttamente!");
     });
 });
