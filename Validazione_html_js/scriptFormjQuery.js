@@ -14,6 +14,19 @@ function convalidaEmail(){
     }
 }
 
+// Funzione per convalidare il codice fiscale
+function convalidaCodiceFiscale(){
+    let codiceFiscale = document.getElementById('inputCodFiscale').value;
+
+    codiceFiscale = codiceFiscale.toUpperCase(); // Trasforma il codice fiscale tutto in maiuscolo
+
+    if (codiceFiscale.match(codiceFiscaleRegEx) && codiceFiscale !== ""){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 // Funzione jQuery
 $(document).ready(function(){
     // Visualizza il form quando si carica il JS
