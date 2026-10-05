@@ -48,6 +48,19 @@ function convalidaTipo(){
     }
 }
 
+// Funzione per convalidare il sesso
+function convalidaSesso() {
+    let opzioni = document.getElementsByName("sesso");
+
+    for (let i = 0; i < opzioni.length; i++) {
+        if (opzioni[i].checked) {
+            return true; // Trovato uno selezionato
+        }
+    }
+
+    return false; // Nessuno è stato selezionato
+}
+
 // Funzione jQuery
 $(document).ready(function(){
     // Visualizza il form quando si carica il JS
