@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validazione Input + jQuery</title>
+</head>
+<body>
+    <noscript id="noJS">
+        <h2>Validazione dati (JavaScript disabilitato)</h2>
+        <form method="post" id="formNoJs" action="salva.php">
+            <label id="inputEmailNoJsLbl">
+                Email: <input type="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" id="inputEmailNoJs" required>
+            </label>
+            <label id="inputCodiceFiscNoJsLbl">
+                Codice Fiscale: <input type="text" pattern="[A-Za-z]{6}[0-9]{2}[A-Za-z]{1}[0-9]{2}[A-Za-z]{1}[0-9]{3}[A-Za-z]{1}" id="inputCodFiscNoJs" required>
+            </label>
+            <label id="inputPIvaNoJsLbl">
+                Partita Iva: <input type="text" pattern="[0-9]{11}" id="inputPIvaNoJs" required>
+            </label>
+            <label id="selectTipoNoJsLbl">
+                <select id="selectTipoJs" required>
+                    <option value="" selected disabled>Seleziona il tipo</option>
+                    <option value="privato">Privato</option>
+                    <option value="azienda">Azienda</option>
+                    <option value="libProf">Libero Professionista</option>
+                </select>
+            </label>
+            <label id="inputSessoNoJsLbl">
+                Sesso:<br>
+                <input type="radio" name="sesso" value="1" id="inputMaschioRadio" required>Maschio<br>
+                <input type="radio" name="sesso" value="2" id="inputFemminaRafio">Femmina
+            </label>
+            <label id="inputHobbyNoJsLbl">
+                Seleziona almeno 2 hobby:
+                <input type="checkbox" id="hobby1" name="hobby">Pesca<br>
+                <input type="checkbox" id="hobby2" name="hobby">Scacchi<br>
+                <input type="checkbox" id="hobby3" name="hobby">Uncinetto
+            </label>
+
+            <button type="submit" id="inviaFormNoJs">Invia Modulo</button>
+        </form>
+    </noscript>
+
+    <div id="JS">
+        <form method="post" id="formJs" action="salva.php">
+            <label id="inputEmailLbl">
+                Email: <input type="email" id="inputEmail">
+            </label>
+            <label id="inputPIvaLbl">
+                Partita Iva: <input type="text" id="inputPIva">
+            </label>
+            <label id="inputCodFiscLbl">
+                Codice Fiscale: <input type="text" id="inputCodFisc">
+            </label>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scriptFormjQuery.js"></script>
+</body>
+</html>
