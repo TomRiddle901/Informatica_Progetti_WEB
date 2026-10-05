@@ -1,3 +1,52 @@
 #JS{
     display: none;
 }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+header{
+    margin-bottom: 25px;
+}
+
+#JS, #noJs{
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+}
+
+#noJs, h2{
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px 12px;
+    outline: none;
+}
+
+button{
+    margin-top: 10px;
+    padding: 12px;
+    cursor: pointer;
+}
