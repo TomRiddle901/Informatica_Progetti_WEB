@@ -64,6 +64,38 @@ function convalidaHobby(){
     // Stessa idea della convalida del sesso
 }
 
+// Funzione per convalidare il form
+function convalidaForm(e){
+    e.preventDefault(); // Evita di ricaricare la pagina quando appare un alert
+
+    let messaggioErrore = "";
+    if (!convalidaEmail()){
+        messaggioErrore += "Email incorretta! ";
+    }
+    if (!convalidaCodiceFiscale()){
+        messaggioErrore += "Codice Fiscale incorretto! ";
+    }
+    if (!convalidaPartitaIVA()){
+        messaggioErrore += "Partita IVA incorretta! ";
+    }
+    if (!convalidaTipo()){
+        messaggioErrore += "Devi selezionare una tipologia valida! ";
+    }
+    if (!convalidaSesso()){
+        messaggioErrore += "Inserisci il sesso! ";
+    }
+    if (!convalidaHobby()){
+        messaggioErrore += "Inserisci almeno 2 hobby! ";
+    }
+
+    if (messaggioErrore.length > 0){
+        alert(messaggioErrore);
+    }else {
+        alert("Form inviato correttamente!");
+        resetForm();
+    }
+}
+
 // Funzione jQuery
 $(document).ready(function(){
     // Visualizza il form quando si carica il JS
