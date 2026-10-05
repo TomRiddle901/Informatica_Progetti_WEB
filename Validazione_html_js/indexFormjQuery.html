@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Validazione Input jQuery</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <style>
+
+		body{font-family: arial;padding:40px; margin:0; background: #19a2c9; color:#fff; }
+
+		.panel{float:left; width: 33%}
+
+		.panel p {background: #1482a1; margin:20px;padding:20px;}
+
+		a{color:#fff210; text-decoration: none; display: inline-block; width:33%;text-align: center}
+
+		hr{ border: 0; height: 1px; background: #ccc; margin-bottom: 40px; }
+
+	</style>
 </head>
 <body>
+    <header>
+        <h1>jQuery</h1>
+        <h2>Introduzione a jQuery</h2>
+    </header>
+    <p><a href="#" id="trigger1">Trigger1</a>
+        <a href="#" id="trigger2">Trigger2</a>
+        <a href="#" id="trigger3">Trigegr3</a>
+    </p>
+    <div id="info1" class="panel"><p>Info 1</p></div>
+    <div id="info2" class="panel"><p>Info 2</p></div>
+    <div id="info3" class="panel"><p>Info 3</p></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="scriptFormjQuery.js"></script>
 </body>
