@@ -16,9 +16,8 @@ function convalidaEmail(){
 
 // Funzione per convalidare il codice fiscale
 function convalidaCodiceFiscale(){
-    let codiceFiscale = document.getElementById('inputCodFiscale').value;
-
-    codiceFiscale = codiceFiscale.toUpperCase(); // Trasforma il codice fiscale tutto in maiuscolo
+    // Recupera e trasforma in maiuscolo il codice fiscale
+    let codiceFiscale = $("#inputCodFisc").val().toUpperCase();
 
     if (codiceFiscale.match(codiceFiscaleRegEx) && codiceFiscale !== ""){
         return true;
