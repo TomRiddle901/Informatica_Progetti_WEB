@@ -1,7 +1,7 @@
 // RegEx
 let emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let codiceFiscaleRegEx = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/;
-let pIvaRexEx = /^[0-9]{11}$/
+let pIvaRegEx = /^[0-9]{11}$/
 
 // Funzione per la convalida delle email
 function convalidaEmail(){
@@ -30,7 +30,7 @@ function convalidaCodiceFiscale(){
 function convalidaPartitaIVA(){
     let pIva = $("#inputPIva").val();
 
-    if (pIva.length !== 11){
+    if (pIva.match(pIvaRegEx) && pIva !== ""){
         return false;
     }else{
         return true;
