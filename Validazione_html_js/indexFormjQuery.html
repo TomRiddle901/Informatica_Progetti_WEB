@@ -18,7 +18,7 @@
                 Partita Iva: <input type="text" pattern="[0-9]{11}" id="inputPIvaNoJs" required>
             </label>
             <label id="selectTipoNoJsLbl">
-                <select id="selectTipoJs" required>
+                <select id="selectTipoNoJs" required>
                     <option value="" selected disabled>Seleziona il tipo</option>
                     <option value="privato">Privato</option>
                     <option value="azienda">Azienda</option>
@@ -52,6 +52,27 @@
             <label id="inputCodFiscLbl">
                 Codice Fiscale: <input type="text" id="inputCodFisc">
             </label>
+            <label id="selectTipoLbl">
+                Seleziona un tipo
+                <select id="selectTipo">
+                    <option value="privato">Privato</option>
+                    <option value="azienda">Azienda</option>
+                    <option value="libProf">Libero Professionista</option>
+                </select>
+            </label>
+            <label id="inputSessoLbl">
+                Sesso<br>
+                <input type="radio" id="inputMaschio" name="inputSesso" value="1">Maschio<br>
+                <input type="radio" id="inputFemmina" name="inputSesso" value="2">Femmina
+            </label>
+            <label id="inputHobbyLbl">
+                Seleziona almeno 2 hobby:<br>
+                <input type="checkbox" id="inputHobby1" name="hobby">Pesca<br>
+                <input type="checkbox" id="inputHobby2" name="hobby">Scacchi<br>
+                <input type="checkbox" id="inputHobby3" name="hobby">Uncinetto
+            </label>
+
+            <button type="submit" id="inviaFormBtn">Invia Modulo</button>
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
