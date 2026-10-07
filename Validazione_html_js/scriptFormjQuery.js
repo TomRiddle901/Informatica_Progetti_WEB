@@ -92,7 +92,7 @@ function convalidaForm(){
 
     if (!convalidaEmail()){
         messaggioErrore += "Email incorretta! ";
-        $("#erroreInputEmail").text("Email non inserita o non valida!").css({
+        $("#erroreInputEmail").text("Email non inserita o non valida.").css({
             'color': '#ff0000'
         }).show();
         $("#inputEmail").css({
@@ -122,7 +122,9 @@ function convalidaForm(){
 
     if (!convalidaPartitaIVA()){
         messaggioErrore += "Partita IVA incorretta! ";
+        visulizzaErroreCampo($("#inputPIva"), $("#erroreInputPIva"));
     }
+
     if (!convalidaTipo()){
         messaggioErrore += "Devi selezionare una tipologia valida! ";
     }
@@ -158,3 +160,19 @@ $(document).ready(function(){
         }
     });
 });
+
+/**
+ * Funzione per cambiare colore al campo input passato per parametro e visualizza lo span
+ * con il messaggio di errore
+ * @param idCampo campo jQuery input preso dell'HTML
+ * @param idSpan campo jQuery span preso dall'HTML
+ */
+function visulizzaErroreCampo(idCampo, idSpan){
+    idCampo.css({
+        'border-color': '#ff0000'
+    });
+
+    idSpan.text("Partita Iva non inserita o non valida.").css({
+        'color': '#ff0000'
+    }).show();
+}
