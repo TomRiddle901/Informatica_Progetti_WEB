@@ -107,7 +107,19 @@ function convalidaForm(){
 
     if (!convalidaCodiceFiscale()){
         messaggioErrore += "Codice Fiscale incorretto! ";
+        $("#erroreInputCodFisc").css({
+            'color': '#ff0000'
+        }).show();
+        $("#inputCodFisc").css({
+            'border-color': '#ff0000'
+        });
+    }else{
+        $("#erroreInputCodFisc").hide();
+        $("#inputCodFisc").css({
+            'border-color': '#000000'
+        });
     }
+
     if (!convalidaPartitaIVA()){
         messaggioErrore += "Partita IVA incorretta! ";
     }
