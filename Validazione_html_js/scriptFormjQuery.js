@@ -10,7 +10,7 @@ let pIvaRegEx = /^[0-9]{11}$/
 function convalidaEmail(){
     let email = $("#inputEmail").val();
 
-    if (email.match(emailRegEx) && email !== ""){
+    if (email.match(emailRegEx)){
         return true;
     }else{
         return false;
@@ -25,7 +25,7 @@ function convalidaCodiceFiscale(){
     // Recupera e trasforma in maiuscolo il codice fiscale
     let codiceFiscale = $("#inputCodFisc").val().toUpperCase();
 
-    if (codiceFiscale.match(codiceFiscaleRegEx) && codiceFiscale !== ""){
+    if (codiceFiscale.match(codiceFiscaleRegEx)){
         return true;
     }else{
         return false;
@@ -39,10 +39,10 @@ function convalidaCodiceFiscale(){
 function convalidaPartitaIVA(){
     let pIva = $("#inputPIva").val();
 
-    if (pIva.match(pIvaRegEx) && pIva !== ""){
-        return false;
-    }else{
+    if (pIva.match(pIvaRegEx)){
         return true;
+    }else{
+        return false;
     }
 }
 
@@ -52,8 +52,9 @@ function convalidaPartitaIVA(){
  */
 function convalidaTipo(){
     let valoreSelect = $("#selectTipo").val();
+    alert(valoreSelect)
 
-    if (valoreSelect === ""){
+    if (valoreSelect === null){
         return false;
     }else{
         return true;
@@ -65,12 +66,13 @@ function convalidaTipo(){
  * @returns {boolean}
  */
 function convalidaSesso() {
-    return $("input[name='inputSesso']:checked").length > 0;
-    /* Prende solo l'elemento radio di nome 'inputSesso' che è selezionato dall'utente
+    /**
+     * Prende solo l'elemento radio di nome 'inputSesso' che è selezionato dall'utente
     * il .lenght restituisce 0 o 1:
     * 0 sta per non selezionato
     * 1 sta per selezionato
     * quindi se è seleionato (.length > 0) ritorna true*/
+    return $("input[name='inputSesso']:checked").length > 0;
 }
 
 /**
@@ -79,7 +81,6 @@ function convalidaSesso() {
  */
 function convalidaHobby(){
     return $("input[name='hobby']:checked").length > 2;
-    // Stessa idea della convalida del sesso
 }
 
 /**
@@ -113,7 +114,11 @@ function convalidaForm(){
 
     if (!convalidaTipo()){
         messaggioErrore += "Devi selezionare una tipologia valida! ";
+        visulizzaErroreCampo($("#selectTipo"), $("#erroreSelectTipo"), "Tipologia ");
+    }else{
+        nascondiErroreCampo($("#selectTipo"), $("#erroreSelectTipo"));
     }
+
     if (!convalidaSesso()){
         messaggioErrore += "Inserisci il sesso! ";
     }
@@ -171,7 +176,7 @@ function visulizzaErroreCampo(idCampo, idSpan, stringCampo){
 function nascondiErroreCampo(idCampo, idSpan){
     // Ricolora il campo in nero
     idCampo.css({
-        'border-color': '#ffffff'
+        'border-color': '#000000'
     });
 
     // Nasconde lo span
