@@ -99,22 +99,16 @@ function convalidaForm(){
 
     if (!convalidaCodiceFiscale()){
         messaggioErrore += "Codice Fiscale incorretto! ";
-        $("#erroreInputCodFisc").css({
-            'color': '#ff0000'
-        }).show();
-        $("#inputCodFisc").css({
-            'border-color': '#ff0000'
-        });
+        visulizzaErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"))
     }else{
-        $("#erroreInputCodFisc").hide();
-        $("#inputCodFisc").css({
-            'border-color': '#000000'
-        });
+        nascondiErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"))
     }
 
     if (!convalidaPartitaIVA()){
         messaggioErrore += "Partita IVA incorretta! ";
         visulizzaErroreCampo($("#inputPIva"), $("#erroreInputPIva"));
+    }else{
+        nascondiErroreCampo($("#inputPIva"), $("#erroreInputPIva"));
     }
 
     if (!convalidaTipo()){
@@ -159,12 +153,12 @@ $(document).ready(function(){
  * @param idCampo campo jQuery input preso dell'HTML
  * @param idSpan campo jQuery span preso dall'HTML
  */
-function visulizzaErroreCampo(idCampo, idSpan){
+function visulizzaErroreCampo(idCampo, idSpan, stringCampo){
     idCampo.css({
         'border-color': '#ff0000'
     });
 
-    idSpan.text("Partita Iva non inserita o non valida.").css({
+    idSpan.text(stringCampo + " non inserita o non valida.").css({
         'color': '#ff0000'
     }).show();
 }
