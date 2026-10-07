@@ -92,17 +92,9 @@ function convalidaForm(){
 
     if (!convalidaEmail()){
         messaggioErrore += "Email incorretta! ";
-        $("#erroreInputEmail").text("Email non inserita o non valida.").css({
-            'color': '#ff0000'
-        }).show();
-        $("#inputEmail").css({
-            'border-color': '#ff0000'
-        });
+        visulizzaErroreCampo($("#inputEmail"), $("#erroreInputEmail"));
     }else{
-        $("#erroreInputEmail").hide();
-        $("#inputEmail").css({
-            'border-color': '#000000'
-        });
+        nascondiErroreCampo($("#inputEmail"), $("#erroreInputEmail"));
     }
 
     if (!convalidaCodiceFiscale()){
@@ -175,4 +167,19 @@ function visulizzaErroreCampo(idCampo, idSpan){
     idSpan.text("Partita Iva non inserita o non valida.").css({
         'color': '#ff0000'
     }).show();
+}
+
+/**
+ * Funzione per cambiare colore al campo input e nasconde lo span
+ * @param idCampo campo jQuery input preso dell'HTML
+ * @param idSpan campo jQuery span preso dall'HTML
+ */
+function nascondiErroreCampo(idCampo, idSpan){
+    // Ricolora il campo in nero
+    idCampo.css({
+        'border-color': '#ffffff'
+    });
+
+    // Nasconde lo span
+    idSpan.hide();
 }
