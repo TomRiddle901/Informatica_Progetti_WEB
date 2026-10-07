@@ -92,21 +92,21 @@ function convalidaForm(){
 
     if (!convalidaEmail()){
         messaggioErrore += "Email incorretta! ";
-        visulizzaErroreCampo($("#inputEmail"), $("#erroreInputEmail"));
+        visulizzaErroreCampo($("#inputEmail"), $("#erroreInputEmail"), "Email");
     }else{
         nascondiErroreCampo($("#inputEmail"), $("#erroreInputEmail"));
     }
 
     if (!convalidaCodiceFiscale()){
         messaggioErrore += "Codice Fiscale incorretto! ";
-        visulizzaErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"))
+        visulizzaErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"), "CodiceFiscale")
     }else{
         nascondiErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"))
     }
 
     if (!convalidaPartitaIVA()){
         messaggioErrore += "Partita IVA incorretta! ";
-        visulizzaErroreCampo($("#inputPIva"), $("#erroreInputPIva"));
+        visulizzaErroreCampo($("#inputPIva"), $("#erroreInputPIva"), "Partita Iva");
     }else{
         nascondiErroreCampo($("#inputPIva"), $("#erroreInputPIva"));
     }
