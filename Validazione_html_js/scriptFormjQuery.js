@@ -70,6 +70,17 @@ function convalidaForm(){
     let messaggioErrore = "";
     if (!convalidaEmail()){
         messaggioErrore += "Email incorretta! ";
+        $("#erroreInputEmail").text("Email non inserita o non valida!").css({
+            'color': '#ff0000'
+        }).show();
+        $("#inputEmail").css({
+            'border-color': '#ff0000'
+        });
+    }else{
+        $("#erroreInputEmail").hide();
+        $("#inputEmail").css({
+            'border-color': '#000000'
+        });
     }
     if (!convalidaCodiceFiscale()){
         messaggioErrore += "Codice Fiscale incorretto! ";
