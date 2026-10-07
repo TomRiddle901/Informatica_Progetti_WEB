@@ -52,7 +52,6 @@ function convalidaPartitaIVA(){
  */
 function convalidaTipo(){
     let valoreSelect = $("#selectTipo").val();
-    alert(valoreSelect)
 
     if (valoreSelect === null){
         return false;
