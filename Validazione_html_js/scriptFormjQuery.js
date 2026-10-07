@@ -113,20 +113,23 @@ function convalidaForm(){
 
     if (!convalidaTipo()){
         messaggioErrore += "Devi selezionare una tipologia valida! ";
-        visulizzaErroreCampo($("#selectTipo"), $("#erroreSelectTipo"), "Tipologia ");
+        visulizzaErroreCampo($("#selectTipo"), $("#erroreSelectTipo"), "Tipologia");
     }else{
         nascondiErroreCampo($("#selectTipo"), $("#erroreSelectTipo"));
     }
 
     if (!convalidaSesso()){
         messaggioErrore += "Inserisci il sesso! ";
-        visulizzaErroreCampo($("input[name='sesso']"), $("#erroreInputSesso"), "Sesso ");
+        visulizzaErroreCampo($("input[name='sesso']"), $("#erroreInputSesso"), "Sesso");
     }else{
         nascondiErroreCampo($("#input[name='sesso']"), $("#erroreInputSesso"));
     }
 
     if (!convalidaHobby()){
         messaggioErrore += "Inserisci almeno 2 hobby! ";
+        visulizzaErroreCampo($("input[name='hobby']"), $("#erroreInputHobby"), "Hobby");
+    }else{
+        nascondiErroreCampo($("input[name='hobby']"), $("#erroreInputHobby"));
     }
 
     if (messaggioErrore.length > 0){
