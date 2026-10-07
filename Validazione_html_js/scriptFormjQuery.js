@@ -120,7 +120,11 @@ function convalidaForm(){
 
     if (!convalidaSesso()){
         messaggioErrore += "Inserisci il sesso! ";
+        visulizzaErroreCampo($("input[name='sesso']"), $("#erroreInputSesso"), "Sesso ");
+    }else{
+        nascondiErroreCampo($("#input[name='sesso']"), $("#erroreInputSesso"));
     }
+
     if (!convalidaHobby()){
         messaggioErrore += "Inserisci almeno 2 hobby! ";
     }
