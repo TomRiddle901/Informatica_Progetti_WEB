@@ -3,7 +3,10 @@ let emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let codiceFiscaleRegEx = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/;
 let pIvaRegEx = /^[0-9]{11}$/
 
-// Funzione per la convalida delle email
+/**
+ * Funzione per la convalida delle email
+ * @returns {boolean}
+ */
 function convalidaEmail(){
     let email = $("#inputEmail").val();
 
@@ -14,7 +17,10 @@ function convalidaEmail(){
     }
 }
 
-// Funzione per convalidare il codice fiscale
+/**
+ * Funzione per la convalida del codice fiscale
+ * @returns {boolean}
+ */
 function convalidaCodiceFiscale(){
     // Recupera e trasforma in maiuscolo il codice fiscale
     let codiceFiscale = $("#inputCodFisc").val().toUpperCase();
@@ -26,7 +32,10 @@ function convalidaCodiceFiscale(){
     }
 }
 
-// Funzione per convalidare la partita IVA
+/**
+ * Funzione per la convalida della partita IVA
+ * @returns {boolean}
+ */
 function convalidaPartitaIVA(){
     let pIva = $("#inputPIva").val();
 
@@ -37,7 +46,10 @@ function convalidaPartitaIVA(){
     }
 }
 
-// Funzione per convalidare la select del tipo
+/**
+ * Funzione per la convalida della Tipologia
+ * @returns {boolean}
+ */
 function convalidaTipo(){
     let valoreSelect = $("#selectTipo").val();
 
@@ -48,7 +60,10 @@ function convalidaTipo(){
     }
 }
 
-// Funzione per convalidare il sesso
+/**
+ * Funzione per la convalida del Sesso
+ * @returns {boolean}
+ */
 function convalidaSesso() {
     return $("input[name='inputSesso']:checked").length > 0;
     /* Prende solo l'elemento radio di nome 'inputSesso' che è selezionato dall'utente
@@ -58,16 +73,23 @@ function convalidaSesso() {
     * quindi se è seleionato (.length > 0) ritorna true*/
 }
 
-// Funzione per convalidare le checkbox degli hobby
+/**
+ * Funzione per la convalida dei checkbox degli hobby
+ * @returns {boolean}
+ */
 function convalidaHobby(){
     return $("input[name='hobby']:checked").length > 2;
     // Stessa idea della convalida del sesso
 }
 
-// Funzione per convalidare il form
+/**
+ * Funzione per la convalida del form
+ * @returns {boolean}
+ */
 function convalidaForm(){
 
     let messaggioErrore = "";
+
     if (!convalidaEmail()){
         messaggioErrore += "Email incorretta! ";
         $("#erroreInputEmail").text("Email non inserita o non valida!").css({
@@ -82,6 +104,7 @@ function convalidaForm(){
             'border-color': '#000000'
         });
     }
+
     if (!convalidaCodiceFiscale()){
         messaggioErrore += "Codice Fiscale incorretto! ";
     }
@@ -107,7 +130,9 @@ function convalidaForm(){
     }
 }
 
-// Funzione jQuery
+/**
+ * Funzione jQuery per visualizzare il form JS + invio del form tramite bottone
+ */
 $(document).ready(function(){
     // Visualizza il form quando si carica il JS
     $("#JS").show();
