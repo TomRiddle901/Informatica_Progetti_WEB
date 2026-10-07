@@ -87,56 +87,68 @@ function convalidaHobby(){
  * @returns {boolean}
  */
 function convalidaForm(){
-
-    let messaggioErrore = "";
+    let erroriPresenti = false;
 
     if (!convalidaEmail()){
-        messaggioErrore += "Email incorretta! ";
         visulizzaErroreCampo($("#inputEmail"), $("#erroreInputEmail"), "Email");
+        erroriPresenti = true;
     }else{
         nascondiErroreCampo($("#inputEmail"), $("#erroreInputEmail"));
     }
 
     if (!convalidaCodiceFiscale()){
-        messaggioErrore += "Codice Fiscale incorretto! ";
-        visulizzaErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"), "CodiceFiscale")
+        visulizzaErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"), "CodiceFiscale");
+        erroriPresenti = true;
     }else{
-        nascondiErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"))
+        nascondiErroreCampo($("#inputCodFisc"), $("#erroreInputCodFisc"));
     }
 
     if (!convalidaPartitaIVA()){
-        messaggioErrore += "Partita IVA incorretta! ";
         visulizzaErroreCampo($("#inputPIva"), $("#erroreInputPIva"), "Partita Iva");
+        erroriPresenti = true;
     }else{
         nascondiErroreCampo($("#inputPIva"), $("#erroreInputPIva"));
     }
 
     if (!convalidaTipo()){
-        messaggioErrore += "Devi selezionare una tipologia valida! ";
         visulizzaErroreCampo($("#selectTipo"), $("#erroreSelectTipo"), "Tipologia");
+        erroriPresenti = true;
     }else{
         nascondiErroreCampo($("#selectTipo"), $("#erroreSelectTipo"));
     }
 
     if (!convalidaSesso()){
-        messaggioErrore += "Inserisci il sesso! ";
         visulizzaErroreCampo($("input[name='sesso']"), $("#erroreInputSesso"), "Sesso");
+        erroriPresenti = true;
     }else{
         nascondiErroreCampo($("#input[name='sesso']"), $("#erroreInputSesso"));
     }
 
     if (!convalidaHobby()){
-        messaggioErrore += "Inserisci almeno 2 hobby! ";
         visulizzaErroreCampo($("input[name='hobby']"), $("#erroreInputHobby"), "Hobby");
+        erroriPresenti = true;
     }else{
         nascondiErroreCampo($("input[name='hobby']"), $("#erroreInputHobby"));
     }
 
-    if (messaggioErrore.length > 0){
-        alert(messaggioErrore);
+    if (erroriPresenti){
+        // Colore del bordo del pulsante rosso
+        $("#btnInvia").css({
+            'border-color': '#ff0000'
+        });
+
+        // Messaggio di errore prima del pulsante
+        $("#erroriPresentiForm").css({
+            'color': '#ff0000'
+        }).text("Impossibile inviare il form a causa di alcuni errori.");
+
         return false;
     }else {
-        alert("Form inviato correttamente!");
+        // Ripristino del colore del bordo del pulsate
+        $("#btnInvia").css({
+            'border-color': '#000000'
+        });
+
         return true;
     }
 }
