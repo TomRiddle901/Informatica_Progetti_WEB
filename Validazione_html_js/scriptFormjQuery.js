@@ -1,6 +1,20 @@
-// RegEx
+/**
+ * RegEx per le Email
+ * @type {RegExp}
+ * @param emailRegEx RegEx per verificare la validità delle Email
+ */
 let emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/**
+ * RegEx per il Codice Fiscale
+ * @type {RegExp}
+ * @param codiceFiscaleRegEx RegEx per verificare la validità del Codice Fiscale
+ */
 let codiceFiscaleRegEx = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/;
+/**
+ * RegEx per la Partita IVA
+ * @type {RegExp}
+ * @param pIvaRegEx RegEx per verificare la validità della Partita IVA
+ */
 let pIvaRegEx = /^[0-9]{11}$/
 
 /**
