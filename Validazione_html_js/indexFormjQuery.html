@@ -81,46 +81,79 @@
             </div>
         </noscript>
 
-    <div id="JS">
+    <!-- Form visualizzato quando viene caricato lo script JS -->
+    <div id="JS" class="card card-body shadow-sm">
         <form method="post" id="formJs">
-            <label id="inputEmailLbl">
-                Email: <input type="email" id="inputEmail">
-                <span id="erroreInputEmail"></span>
-            </label>
-            <label id="inputPIvaLbl">
-                Partita Iva: <input type="text" id="inputPIva">
-                <span id="erroreInputPIva"></span>
-            </label>
-            <label id="inputCodFiscLbl">
-                Codice Fiscale: <input type="text" id="inputCodFisc">
-                <span id="erroreInputCodFisc"></span>
-            </label>
-            <label id="selectTipoLbl">
-                Seleziona un tipo
-                <select id="selectTipo">
+            <!-- Casella di Input per l'Email -->
+            <div class="mb-3">
+                <label for="inputEmail" id="inputEmailLbl" class="form-label">Email:</label>
+                <input type="email" id="inputEmail" class="form-control">
+                <div class="invalid-feedback" id="erroreInputEmail"></div>
+            </div>
+
+            <!-- Casella di Input per la Partita IVA -->
+            <div class="mb-3">
+                <label for="inputPIva" id="inputPIvaLbl" class="form-label">Partita Iva:</label>
+                <input type="text" id="inputPIva" class="form-control">
+                <div class="invalid-feedback" id="erroreInputPIva"></div>
+            </div>
+
+            <!-- Casella di Input per il Codice Fiscale -->
+            <div class="mb-3">
+                <label for="inputCodFisc" id="inputCodFiscLbl" class="form-label">Codice Fiscale:</label>
+                <input type="text" id="inputCodFisc" class="form-control">
+                <div class="invalid-feedback" id="erroreInputCodFisc"></div>
+            </div>
+
+            <!-- Select per la tipologia -->
+            <div class="mb-3">
+                <label for="selectTipo" id="selectTipoLbl" class="form-label">Tipologia:</label>
+                <select id="selectTipo" class="form-select">
                     <option value="" selected disabled>Seleziona il tipo</option>
                     <option value="privato">Privato</option>
                     <option value="azienda">Azienda</option>
                     <option value="libProf">Libero Professionista</option>
                 </select>
-                <span id="erroreSelectTipo"></span>
-            </label>
-            <label id="inputSessoLbl">
-                Sesso<br>
-                <input type="radio" id="inputMaschio" name="inputSesso" value="1">Maschio<br>
-                <input type="radio" id="inputFemmina" name="inputSesso" value="2">Femmina
-                <span id="erroreInputSesso"></span>
-            </label>
-            <label id="inputHobbyLbl">
-                Seleziona almeno 2 hobby:<br>
-                <input type="checkbox" id="inputHobby1" name="hobby">Pesca<br>
-                <input type="checkbox" id="inputHobby2" name="hobby">Scacchi<br>
-                <input type="checkbox" id="inputHobby3" name="hobby">Uncinetto
-                <span id="erroreInputHobby"></span>
-            </label>
+                <div class="invalid-feedback" id="erroreSelectTipo"></div>
+            </div>
 
-            <span id="erroriPresentiForm"></span>
-            <button type="submit" id="inviaFormBtn">Invia Modulo</button>
+            <!-- Input Radio per il Sesso -->
+            <div class="mb-3">
+                <label class="form-label d-block" id="inputSessoLbl">Sesso</label>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="inputMaschio" class="form-check-input" name="inputSesso" value="1">
+                    <label for="inputMaschio" class="form-check-label">Maschio</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="inputFemmina" class="form-check-input" name="inputSesso" value="2">
+                    <label for="inputFemmina" class="form-check-label">Femmina</label>
+                </div>
+                <div class="invalid-feedback" id="erroreInputSesso"></div>
+            </div>
+
+            <!-- Checkbox per selezionare gli hobby -->
+            <div class="mb-3">
+                <label id="inputHobbyLbl" class="form-label d-block">Seleziona almeno 2 hobby:</label>
+                <div class="form-check">
+                    <input type="checkbox" id="inputHobby1" class="form-check-input" name="hobby">
+                    <label for="inputHobby1" class="form-check-label">Pesca</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="inputHobby2" class="form-check-input" name="hobby">
+                    <label for="inputHobby2" class="form-check-label">Scacchi</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="inputHobby3" class="form-check-input" name="hobby">
+                    <label for="inputHobby3" class="form-check-label">Uncinetto</label>
+                </div>
+                <div class="invalid-feedback" id="erroreInputHobby"></div>
+            </div>
+
+
+            <div id="erroriPresentiForm" class="text-danger mb-3 fw-bold">
+
+            </div>
+            <button type="submit" id="inviaFormBtn" class="btn btn-primary">Invia Modulo</button>
         </form>
     </div>
     </div>
