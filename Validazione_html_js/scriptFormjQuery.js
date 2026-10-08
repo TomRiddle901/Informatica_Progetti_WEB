@@ -146,22 +146,20 @@ function convalidaForm(){
     }
 
     if (erroriPresenti){
-        // Colore del bordo del pulsante rosso
-        $("#btnInvia").css({
-            'border-color': '#ff0000'
-        });
+        // Utilizzo della classe errore di Bootstrap
+        $("#inviaFormBtn").addClass("border-danger");
 
         // Messaggio di errore prima del pulsante
-        $("#erroriPresentiForm").css({
-            'color': '#ff0000'
-        }).text("Impossibile inviare il form a causa di alcuni errori.");
+        $("#erroriPresentiForm").addClass("text-danger")
+            .text("Impossibile inviare il form a causa di alcuni errori");
 
         return false;
     }else {
         // Ripristino del colore del bordo del pulsate
-        $("#btnInvia").css({
-            'border-color': '#000000'
-        });
+        $("#btnInvia").removeClass("border-danger");
+
+        // Nasconde il messaggio di errore
+        $("#erroriPresentiForm").text("");
 
         return true;
     }
