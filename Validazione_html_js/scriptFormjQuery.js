@@ -175,6 +175,7 @@ $(document).ready(function(){
  * con il messaggio di errore
  * @param idCampo campo jQuery input preso dell'HTML
  * @param idSpan campo jQuery span preso dall'HTML
+ * @param stringCampo testo dinamico in base all'errore
  */
 function visulizzaErroreCampo(idCampo, idSpan, stringCampo){
     idCampo.css({
