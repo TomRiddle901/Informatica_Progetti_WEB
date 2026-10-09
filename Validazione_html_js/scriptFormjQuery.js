@@ -184,8 +184,7 @@ $(document).ready(function(){
 });
 
 /**
- * Funzione per cambiare colore al campo input passato per parametro e visualizza lo span
- * con il messaggio di errore
+ * Funzione per visualizzare il messaggio di errore sotto goni campo errato
  * @param idCampo campo jQuery input preso dell'HTML
  * @param idSpan campo jQuery span preso dall'HTML
  * @param stringCampo testo dinamico in base all'errore
