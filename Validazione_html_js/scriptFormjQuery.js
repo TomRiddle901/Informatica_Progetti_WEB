@@ -191,13 +191,9 @@ $(document).ready(function(){
  * @param stringCampo testo dinamico in base all'errore
  */
 function visulizzaErroreCampo(idCampo, idSpan, stringCampo){
-    idCampo.css({
-        'border-color': '#ff0000'
-    });
+    idCampo.addClass("is-invalid");
 
-    idSpan.text(stringCampo + " non inserita o non valida.").css({
-        'color': '#ff0000'
-    }).show();
+    idSpan.addClass("invalid-feedback").text(stringCampo + " non inserita o non valida").show();
 }
 
 /**
