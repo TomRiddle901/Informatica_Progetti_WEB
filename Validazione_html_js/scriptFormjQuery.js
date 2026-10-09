@@ -196,7 +196,7 @@ function visulizzaErroreCampo(idCampo, idSpan, stringCampo){
 }
 
 /**
- * Funzione per cambiare colore al campo input e nasconde lo span
+ * Funzione per reimpostare i campi di input senza errori
  * @param idCampo campo jQuery input preso dell'HTML
  * @param idSpan campo jQuery span preso dall'HTML
  */
