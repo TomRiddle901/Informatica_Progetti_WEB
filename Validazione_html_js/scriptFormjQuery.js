@@ -178,6 +178,7 @@ $(document).ready(function(){
 
         if (convalidaForm()){
             $("#formJs").trigger('reset'); // Reset del form
+            $(".is-invalid").removeClass("is-invalid");
         }
     });
 });
