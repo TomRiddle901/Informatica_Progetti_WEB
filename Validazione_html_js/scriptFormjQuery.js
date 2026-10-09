@@ -93,7 +93,7 @@ function convalidaSesso() {
  * @returns {boolean}
  */
 function convalidaHobby(){
-    return $("input[name='hobby']:checked").length > 2;
+    return $("input[name='hobby']:checked").length >= 2;
 }
 
 /**
