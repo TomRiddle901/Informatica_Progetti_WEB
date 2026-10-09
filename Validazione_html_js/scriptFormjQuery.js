@@ -201,11 +201,7 @@ function visulizzaErroreCampo(idCampo, idSpan, stringCampo){
  * @param idSpan campo jQuery span preso dall'HTML
  */
 function nascondiErroreCampo(idCampo, idSpan){
-    // Ricolora il campo in nero
-    idCampo.css({
-        'border-color': '#000000'
-    });
+    idCampo.removeClass("is-invalid");
 
-    // Nasconde lo span
     idSpan.hide();
 }
