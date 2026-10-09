@@ -156,7 +156,7 @@ function convalidaForm(){
         return false;
     }else {
         // Ripristino del colore del bordo del pulsate
-        $("#btnInvia").removeClass("border-danger");
+        $("#inviaFormBtn").removeClass("border-danger");
 
         // Nasconde il messaggio di errore
         $("#erroriPresentiForm").text("");
