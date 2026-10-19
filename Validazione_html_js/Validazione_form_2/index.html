@@ -12,41 +12,43 @@
 
     <noscript>
         <form id="formNoJs" method="post">
-            <!-- Campo input testo -->
-            <label for="inputTestoNoJs" id="inputTestoNoJsLbl">Campo testo</label>
-            <input type="text" id="inputTestoNoJs" placeholder="Campo di testo" required>
+            <div class="campiInput">
+                <!-- Campo input testo -->
+                <label for="inputTestoNoJs" id="inputTestoNoJsLbl">Campo testo</label>
+                <input type="text" id="inputTestoNoJs" placeholder="Campo di testo" required>
 
-            <!-- Campo input numerico -->
-            <label for="inputNumericoNoJs" id="inputNumericoNoJsLbl">Campo numerico (0-100)</label>
-            <input type="number" id="inputNumericoNoJs" min="0" max="100" placeholder="Campo numerico (0-100)" required>
+                <!-- Campo input numerico -->
+                <label for="inputNumericoNoJs" id="inputNumericoNoJsLbl">Campo numerico (0-100)</label>
+                <input type="number" id="inputNumericoNoJs" min="0" max="100" placeholder="Campo numerico (0-100)" required>
 
-            <!-- Campo numerico a 5 cifre massime -->
-            <label for="inputNumerico5CifreNoJs" id="inputNumerico5CifreNoJsLbl">Campo numerico (max 5 cifre)</label>
-            <input type="number" id="inputNumerico5CifreNoJs" maxlength="5" placeholder="Campo numerico (max 5 cifre)" required>
+                <!-- Campo numerico a 5 cifre massime -->
+                <label for="inputNumerico5CifreNoJs" id="inputNumerico5CifreNoJsLbl">Campo numerico (max 5 cifre)</label>
+                <input type="number" id="inputNumerico5CifreNoJs" maxlength="5" placeholder="Campo numerico (max 5 cifre)" required>
 
-            <!-- Campo input email -->
-            <label for="inputEmailNoJs" id="inputEmailNoJsLbl">Email</label>
-            <input type="email" id="inputEmailNoJs" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="Campo Email" required>
+                <!-- Campo input email -->
+                <label for="inputEmailNoJs" id="inputEmailNoJsLbl">Email</label>
+                <input type="email" id="inputEmailNoJs" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="Campo Email" required>
 
-            <!-- Select per tipologia -->
-            <label for="selectTipologiaNoJs" id="selectTipologiaNoJsLbl">Scegli una tipologia</label>
-            <select id="selectTipologiaNoJs" required>
-                <option value="" selected disabled>Scegli un'opzione</option>
-                <option value="bonifico">Bonifico</option>
-                <option value="bonificoIstantaneo">Bonifico istantaneo</option>
-            </select>
+                <!-- Select per tipologia -->
+                <label for="selectTipologiaNoJs" id="selectTipologiaNoJsLbl">Scegli una tipologia</label>
+                <select id="selectTipologiaNoJs" required>
+                    <option value="" selected disabled>Scegli un'opzione</option>
+                    <option value="bonifico">Bonifico</option>
+                    <option value="bonificoIstantaneo">Bonifico istantaneo</option>
+                </select>
 
-            <!-- Input per la data -->
-            <label for="selectDataNoJs" id="selectDataNoJsLbl">Scegli una data</label>
-            <input type="date" id="selectDataNoJs" required>
+                <!-- Input per la data -->
+                <label for="selectDataNoJs" id="selectDataNoJsLbl">Scegli una data</label>
+                <input type="date" id="selectDataNoJs" required>
 
-            <!-- Input per l'importo -->
-            <label for="inputImportoNoJs" id="inputImportoNoJsLbl">Importo</label>
-            <input type="number" id="inputImportoNoJs" min="0" placeholder="0,00" required>
+                <!-- Input per l'importo -->
+                <label for="inputImportoNoJs" id="inputImportoNoJsLbl">Importo</label>
+                <input type="number" id="inputImportoNoJs" min="0" placeholder="0,00" required>
 
-            <!-- Input per la percentuale -->
-            <label for="inputPercentualeNoJs" id="inputPercentualeNoJsLbl">Percentuale</label>
-            <input type="number" id="inputPercentualeNoJs" min="0" max="100" placeholder="0" required>
+                <!-- Input per la percentuale -->
+                <label for="inputPercentualeNoJs" id="inputPercentualeNoJsLbl">Percentuale</label>
+                <input type="number" id="inputPercentualeNoJs" min="0" max="100" placeholder="0" required>
+            </div>
 
             <!-- Campo input testo aggiuntivo -->
             <label for="inputTestoAggiuntivoNoJs" id="inputTestoAggiuntivoNoJsLbl">Testo aggiuntivo</label>
