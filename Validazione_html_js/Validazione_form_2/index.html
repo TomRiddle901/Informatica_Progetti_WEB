@@ -27,6 +27,14 @@
             <!-- Campo input email -->
             <label for="inputEmailNoJs" id="inputEmailNoJsLbl">Email</label>
             <input type="email" id="inputEmailNoJs" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+
+            <!-- Select per tipologia -->
+            <label for="selectTipologiaNoJs" id="selectTipologiaNoJsLbl">Scegli una tipologia</label>
+            <select id="selectTipologiaNoJs" required>
+                <option value="" selected disabled>Scegli un'opzione</option>
+                <option value="bonifico">Bonifico</option>
+                <option value="bonificoIstantaneo">Bonifico istantaneo</option>
+            </select>
         </form>
     </noscript>
     <script src="script.js"></script>
