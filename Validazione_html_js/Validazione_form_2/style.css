@@ -169,6 +169,24 @@ input[type="file"]{
     cursor: pointer;
 }
 
+#inputFileNoJs::file-selector-button{
+    background-color: transparent;
+    border: none;
+}
+
+#inputFileNoJs::-webkit-file-upload-button{
+    background-color: transparent;
+    border: none;
+}
+
+#inputImmagineNoJs::file-selector-button{
+    display: none;
+}
+
+#inputImmagineNoJs::-webkit-file-upload-button{
+    display: none;
+}
+
 /* Bottone invio form */
 button[type="submit"]{
     display: block;
