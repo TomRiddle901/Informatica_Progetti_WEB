@@ -143,3 +143,20 @@ select:focus{
     accent-color: #2563eb;
     cursor: pointer;
 }
+
+/*Fieldset e Legend*/
+fieldset{
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+legend{
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    padding: 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
