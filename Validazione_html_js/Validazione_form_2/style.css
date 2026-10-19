@@ -56,3 +56,11 @@ form{
 .form-group.full-width{
     grid-column: 1 / -1;
 }
+
+/* Etichette */
+label{
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
