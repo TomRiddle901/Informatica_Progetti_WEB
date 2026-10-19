@@ -110,3 +110,10 @@ select:focus{
     color: #64748b;
     pointer-events: none;
 }
+
+/* Spazi per evitare sovrapposizioni */
+.form-group:has(.input-importo-symbol),
+.form-group:has(.input-percentuale-symbol),
+.form-group:has(.input-icon) input{
+    padding-right: 34px;
+}
