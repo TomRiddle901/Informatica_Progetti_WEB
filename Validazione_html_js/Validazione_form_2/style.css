@@ -1,3 +1,4 @@
+/* Il file CSS è validop sia senza JS che con JS */
 /* Base */
 *{
     box-sizing: border-box;
@@ -166,4 +167,24 @@ input[type="file"]{
     padding: 8px;
     background-color: #f8fafc;
     cursor: pointer;
+}
+
+/* Bottone invio form */
+button[type="submit"]{
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]{
+    background-color: #1d4ed8;
 }
