@@ -1,0 +1,31 @@
+/* Base */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body{
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 32px 16px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 26px;
+    color: #0f172a;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+h2{
+    font-size: 18px;
+    color: #0f172a;
+    margin: 28px 0 16px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+}
