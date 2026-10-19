@@ -29,3 +29,12 @@ h2{
     padding-bottom: 6px;
     border-bottom: 1px solid #e2e8f0;
 }
+
+/* Stile form */
+form{
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
