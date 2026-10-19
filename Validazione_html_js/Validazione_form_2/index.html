@@ -42,7 +42,11 @@
 
             <!-- Input per l'importo -->
             <label for="inputImportoNoJs" id="inputImportoNoJsLbl">Importo</label>
-            <input type="number" id="inputImportoNoJs" required>
+            <input type="number" id="inputImportoNoJs" min="0" placeholder="0,00" required>
+
+            <!-- Input per la percentuale -->
+            <label for="inputPercentualeNoJs" id="inputPercentualeNoJsLbl">Percentuale</label>
+            <input type="number" id="inputPercentualeNoJs" min="0" max="100" placeholder="0" required>
         </form>
     </noscript>
     <script src="script.js"></script>
