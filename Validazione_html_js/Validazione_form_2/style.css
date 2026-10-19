@@ -64,3 +64,27 @@ label{
     color: #475569;
     margin-bottom: 6px;
 }
+
+/* Stile dei campi di input e select */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select,
+input[type="file"]{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #0f172a;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
