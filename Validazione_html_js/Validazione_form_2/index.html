@@ -14,19 +14,19 @@
         <form id="formNoJs" method="post">
             <!-- Campo input testo -->
             <label for="inputTestoNoJs" id="inputTestoNoJsLbl">Campo testo</label>
-            <input type="text" id="inputTestoNoJs" required>
+            <input type="text" id="inputTestoNoJs" placeholder="Campo di testo" required>
 
             <!-- Campo input numerico -->
             <label for="inputNumericoNoJs" id="inputNumericoNoJsLbl">Campo numerico (0-100)</label>
-            <input type="number" id="inputNumericoNoJs" min="0" max="100" required>
+            <input type="number" id="inputNumericoNoJs" min="0" max="100" placeholder="Campo numerico (0-100)" required>
 
             <!-- Campo numerico a 5 cifre massime -->
             <label for="inputNumerico5CifreNoJs" id="inputNumerico5CifreNoJsLbl">Campo numerico (max 5 cifre)</label>
-            <input type="number" id="inputNumerico5CifreNoJs" maxlength="5" required>
+            <input type="number" id="inputNumerico5CifreNoJs" maxlength="5" placeholder="Campo numerico (max 5 cifre)" required>
 
             <!-- Campo input email -->
             <label for="inputEmailNoJs" id="inputEmailNoJsLbl">Email</label>
-            <input type="email" id="inputEmailNoJs" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+            <input type="email" id="inputEmailNoJs" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="Campo Email" required>
 
             <!-- Select per tipologia -->
             <label for="selectTipologiaNoJs" id="selectTipologiaNoJsLbl">Scegli una tipologia</label>
@@ -35,6 +35,10 @@
                 <option value="bonifico">Bonifico</option>
                 <option value="bonificoIstantaneo">Bonifico istantaneo</option>
             </select>
+
+            <!-- Input per la data -->
+            <label for="selectDataNoJs" id="selectDataNoJsLbl">Scegli una data</label>
+            <input type="date" id="selectDataNoJs" required>
         </form>
     </noscript>
     <script src="script.js"></script>
