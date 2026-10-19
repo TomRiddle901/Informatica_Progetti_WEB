@@ -117,3 +117,29 @@ select:focus{
 .form-group:has(.input-icon) input{
     padding-right: 34px;
 }
+
+/*Sezione checkbox e radio inline*/
+.control-row{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.control-item{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #334155;
+    cursor: pointer;
+}
+
+.control-item input[type="checkbox"],
+.control-item input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
