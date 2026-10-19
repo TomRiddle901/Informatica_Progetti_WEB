@@ -160,3 +160,10 @@ legend{
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+/* Stile per input di tipo file */
+input[type="file"]{
+    padding: 8px;
+    background-color: #f8fafc;
+    cursor: pointer;
+}
