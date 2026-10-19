@@ -130,11 +130,14 @@
                 <!-- Campo upload file -->
                 <div class="form-group">
                     <label for="inputFileNoJs" id="inputFileNoJsLbl">Scegli un file</label>
-                    <input type="file" id="inputFileNoJs" placeholder="Nessun file selezionato" required>
+                    <input type="file" id="inputFileNoJs" required>
                 </div>
 
                 <!-- Bottone upload immagine -->
-                <input type="file" id="inputImmagineNoJs" accept=".jpeg, .jpg, .png" placeholder="Upload custom (solo jpg/png">
+                <div class="form-group">
+                    <label for="inputImmagineNoJs" id="inputImmagineNoJsLbl">Upload custom (solo jpg/png)</label>
+                    <input type="file" id="inputImmagineNoJs" accept=".jpeg, .jpg, .png">
+                </div>
             </div>
 
             <!-- Bottone per inviare il form -->
