@@ -45,3 +45,14 @@ form{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 16px;
 }
+
+/* Layout di ogni sigolo campo */
+.form-group{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-group.full-width{
+    grid-column: 1 / -1;
+}
