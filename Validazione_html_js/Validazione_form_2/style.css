@@ -233,6 +233,24 @@ input[type="file"]{
     display: none;
 }
 
+#inputFile::file-selector-button{
+    background-color: transparent;
+    border: none;
+}
+
+#inputFile::-webkit-file-upload-button{
+    background-color: transparent;
+    border: none;
+}
+
+#inputImmagine::file-selector-button{
+    display: none;
+}
+
+#inputImmagine::-webkit-file-upload-button{
+    display: none;
+}
+
 /* Bottone invio form */
 button[type="submit"]{
     display: block;
