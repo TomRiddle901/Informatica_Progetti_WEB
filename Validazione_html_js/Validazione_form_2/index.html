@@ -231,14 +231,14 @@
 
             <h3>Checkbox/Radio</h3>
             <div class="control-row">
+                <!-- Checkbox isolata -->
                 <div class="control-item">
-                    <!-- Checkbox isolata -->
                     <input type="checkbox" id="checkboxIsolata">
                     <label for="checkboxIsolata" id="checkboxIsolataLbl">Checkbox isolata</label>
                 </div>
 
+                <!-- Toggle isolato -->
                 <div class="control-item">
-                    <!-- Toggle isolato -->
                     <label for="toggleIsolato" id="toggleIsolatoLbl" class="switch">
                         <input type="checkbox" id="toggleIsolato">
                         <span class="slider"></span>
@@ -246,6 +246,22 @@
                     <label for="toggleIsolato" id="toggleIsolatoTxt">Toggle Isolato</label>
                 </div>
             </div>
+
+            <!-- Fieldset campi radio -->
+            <fieldset>
+                <legend>Fieldset radio buttons</legend>
+                <div class="control-row">
+                    <!-- Radio buttons -->
+                    <div class="control-item">
+                        <input type="radio" id="radio1" name="radio">
+                        <label for="radio1" id="radio1Lbl">Radio 1</label>
+                    </div>
+                    <div class="control-item">
+                        <input type="radio" id="radio2" name="radio">
+                        <label for="radio2" id="radio2Lbl">Radio 2</label>
+                    </div>
+                </div>
+            </fieldset>
         </form>
     </div>
     <script src="script.js"></script>
