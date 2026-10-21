@@ -13,11 +13,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
 /**
  * Funzione per validare il campo di testo
  * @param idCampo id del campo di testo
+ * @return {boolean}
  */
-function validaCampoTesto(idCampo){
+function convalidaCampoTesto(idCampo){
     let testo = document.getElementById(idCampo).value;
 
     if (testo.isEmpty()){
+        return false;
+    }else {
+        return true;
+    }
+}
+
+/**
+ * Funzione per convalidare l'input numerico (0 - 100)
+ * @returns {boolean}
+ */
+function convalidaInputNumerico(){
+    let campoNumerico = document.getElementById("inputNumerico").value;
+
+    if (campoNumerico.length === 0 && campoNumerico < 0 || campoNumerico > 100){
         return false;
     }else {
         return true;
