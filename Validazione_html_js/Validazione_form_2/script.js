@@ -32,7 +32,21 @@ function convalidaCampoTesto(idCampo){
 function convalidaInputNumerico(){
     let campoNumerico = document.getElementById("inputNumerico").value;
 
-    if (campoNumerico.length === 0 && campoNumerico < 0 || campoNumerico > 100){
+    if (campoNumerico.length === 0 || campoNumerico < 0 || campoNumerico > 100){
+        return false;
+    }else {
+        return true;
+    }
+}
+
+/**
+ * Funzione per convalidare l'input numerico (max 5 cifre)
+ * @return {boolean}
+ */
+function convalidaInputNumerico5Cifre(){
+    let campoNumerico = document.getElementById("inputNumerico5Cifre").value;
+
+    if (campoNumerico.length === 0 || campoNumerico < 0 || campoNumerico > 99999){
         return false;
     }else {
         return true;
