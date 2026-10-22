@@ -279,3 +279,24 @@ button[type="submit"]{
 button[type="submit"]{
     background-color: #1d4ed8;
 }
+
+/* Stile per gli span dei messaggi di errore */
+span.error{
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 4px;
+    display: none;
+}
+
+.control-row, span.error{
+    width: 100%;
+    margin-top: 6px;
+}
+
+#msgErrGenerale{
+    margin-top: 14px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
