@@ -66,3 +66,17 @@ function convalidaEmail(){
         return false;
     }
 }
+
+/**
+ * Funzione per convalidare il select della tipologia
+ * @return {boolean}
+ */
+function convalidaSelectTipologia(){
+    let elementoSelezionato = document.getElementById("selectTipo").value;
+
+    if (elementoSelezionato !== ""){
+        return true;
+    }else{
+        return false;
+    }
+}
