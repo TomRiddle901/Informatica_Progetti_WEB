@@ -163,24 +163,29 @@
                 <div class="form-group">
                     <label for="inputTesto" id="inputTestoLbl">Campo Testo</label>
                     <input type="text" id="inputTesto" placeholder="Campo di testo">
+                    <span id="msgErrTxt" class="error"></span>
                 </div>
 
                 <!-- Campo input numerico -->
                 <div class="form-group">
                     <label for="inputNumerico" id="inputNumericoLbl">Campo numerico (0 - 100)</label>
                     <input type="number" id="inputNumerico" min="0" max="100" placeholder="Campo numerico (0 - 100)">
+                    <span id="msgErrNum1" class="error"></span>
                 </div>
 
                 <!-- Campo input numerico max 5 cifre -->
                 <div class="form-group">
                     <label for="inputNumerico5Cifre" id="inputNumerico5CifreLbl">Campo numerico (max 5 cifre)</label>
                     <input type="number" id="inputNumerico5Cifre" min="0" max="99999" placeholder="Campo numerico (max 5 cifre)">
+                    <span id="msgErrNum2" class="error"></span>
+
                 </div>
 
                 <!-- Campo input email -->
                 <div class="form-group">
                     <label for="inputEmail" id="inputEmailLbl">Email</label>
                     <input type="email" id="inputEmail" placeholder="Campo Email">
+                    <span id="msgErrMail" class="error"></span>
                 </div>
 
                 <!-- Select per la tipologia -->
@@ -191,12 +196,14 @@
                         <option value="bonifico">Bonifico</option>
                         <option value="bonificoIstantaneo">Bonifico istantaneo</option>
                     </select>
+                    <span id="msgErrSel1" class="error"></span>
                 </div>
 
                 <!-- Select per la data -->
                 <div class="form-group">
                     <label for="selectData" id="selectDataInput">Scegli una data</label>
                     <input type="date" id="selectData">
+                    <span id="msgErrSelData" class="error"></span>
                 </div>
 
                 <!-- Input importo -->
@@ -204,6 +211,7 @@
                     <label for="inputImporto" id="inputImportoLbl">Importo</label>
                     <span class="input-importo-symbol">€</span>
                     <input type="number" id="inputImporto" min="0" placeholder="0,00">
+                    <span id="msgErrImporto" class="error"></span>
                 </div>
 
                 <!-- Input percentuale -->
@@ -211,9 +219,10 @@
                     <label for="inputPercentuale" id="inputPercentualeLbl">Percentuale</label>
                     <span class="input-percentuale-symbol">%</span>
                     <input type="number" id="inputPercentuale" min="0" max="100" placeholder="0">
+                    <span id="msgErrPercentuale" class="error"></span>
                 </div>
 
-                <!-- Input per la percentuale -->
+                <!-- Input per il testo aggiuntivo -->
                 <div class="form-group">
                     <label for="inputTestoAggiuntivo" id="inputTestoAggiuntivoLbl">Testo aggiuntivo</label>
                     <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -221,6 +230,7 @@
                         <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
                     </svg>
                     <input type="text" id="inputTestoAggiuntivo" placeholder="Lorem Ipsum">
+                    <span id="msgErrTxtAgg" class="error"></span>
                 </div>
             </div>
 
@@ -229,6 +239,7 @@
                 <!-- Input comune di residenza -->
                 <label for="inputComuneResidenza" id="inputComuneResidenzaLbl">Comune di residenza</label>
                 <input type="text" id="inputComuneResidenza" placeholder="Comune di residenza">
+                <span id="msgErrComune" class="error"></span>
             </div>
 
             <h2>Checkbox/Radio</h2>
@@ -237,6 +248,7 @@
                 <div class="control-item">
                     <input type="checkbox" id="checkboxIsolata" name="checkboxIsolata">
                     <label for="checkboxIsolata" id="checkboxIsolataLbl">Checkbox isolata</label>
+                    <span id="msgErrCheckIsolata" class="error"></span>
                 </div>
 
                 <!-- Toggle isolato -->
@@ -246,6 +258,7 @@
                         <span class="slider"></span>
                     </label>
                     <label for="toggleIsolato" id="toggleIsolatoTxt">Toggle Isolato</label>
+                    <span id="msgErrToggIsolato" class="error"></span>
                 </div>
             </div>
 
@@ -261,6 +274,7 @@
                         <input type="radio" id="radio2" name="radio">
                         <label for="radio2" id="radio2Lbl">Radio 2</label>
                     </div>
+                    <span id="msgErrFieldRadio" class="error"></span>
                 </div>
             </fieldset>
 
@@ -276,6 +290,7 @@
                         <input type="checkbox" id="checkbox2" name="checkboxFieldset">
                         <label for="checkbox2" id="checkbox2Lbl">Checkbox 2</label>
                     </div>
+                    <span id="msgErrFieldCheckbox" class="error"></span>
                 </div>
             </fieldset>
 
@@ -285,16 +300,19 @@
                 <div class="form-group">
                     <label for="inputFile" id="inputFileLbl">Scegli un file</label>
                     <input type="file" id="inputFile">
+                    <span id="msgErrInFile" class="error"></span>
                 </div>
 
                 <!-- Bottone caricamento immagine -->
                 <div class="form-group">
                     <label for="inputImmagine" id="inputImmagineLbl">Upload custom (solojpg/png)</label>
                     <input type="file" id="inputImmagine" accept=".jpg, .jpeg, .png">
+                    <span id="msgErrInImmagine" class="error"></span>
                 </div>
             </div>
 
             <button type="submit" id="inviaFormBtn">Invia Form</button>
+            <span id="msgErrGenerale" class="error"></span>
         </form>
     </div>
     <script src="script.js"></script>
