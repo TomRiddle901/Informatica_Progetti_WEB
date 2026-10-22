@@ -52,3 +52,17 @@ function convalidaInputNumerico5Cifre(){
         return true;
     }
 }
+
+/**
+ * Funzione per convalidare l'email
+ * @return {boolean}
+ */
+function convalidaEmail(){
+    let email = document.getElementById("inputEmail").value;
+
+    if (email.match(emailRegEx)){
+        return true;
+    }else{
+        return false;
+    }
+}
