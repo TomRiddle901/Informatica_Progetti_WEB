@@ -125,11 +125,11 @@ function convalidaPercentuale(){
 }
 
 /**
- * Funzione per convalidare le checkbox utilizzando il nome
+ * Funzione per convalidare le checkbox e i campi radio utilizzando il nome
  * @param nameCheckbox Nome della checkbox (tag <name>)
  * @return {boolean}
  */
-function convalidaCheckbox(nameCheckbox){
+function convalidaCheckboxERadio(nameCheckbox){
     let checkbox = document.getElementsByName(nameCheckbox);
     let selezionati = 0;
 
