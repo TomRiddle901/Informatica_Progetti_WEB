@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 /**
- * Funzione per validare il campo di testo
+ * Funzione per validare un campo di testo
  * @param idCampo id del campo di testo
  * @return {boolean}
  */
@@ -118,6 +118,28 @@ function convalidaPercentuale(){
     let percentuale = document.getElementById("inputPercentuale").value;
 
     if (percentuale !== "" && percentuale > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+/**
+ * Funzione per convalidare le checkbox utilizzando il nome
+ * @param nameCheckbox Nome della checkbox (tag <name>)
+ * @return {boolean}
+ */
+function convalidaCheckbox(nameCheckbox){
+    let checkbox = document.getElementsByName(nameCheckbox);
+    let selezionati = 0;
+
+    for (let i = 0; i < checkbox.length; i++){
+        if (checkbox[i].checked){
+            selezionati++;
+        }
+    }
+
+    if (selezionati >= 1){
         return true;
     }else{
         return false;
