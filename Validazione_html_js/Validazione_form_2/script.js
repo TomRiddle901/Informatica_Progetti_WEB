@@ -94,3 +94,17 @@ function convalidaData(){
         return false;
     }
 }
+
+/**
+ * Funzione per convalidare l'importo inserito
+ * @return {boolean}
+ */
+function convalidaImporto(){
+    let importo = document.getElementById("inputImporto").value;
+
+    if (importo !== "" && importo > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
