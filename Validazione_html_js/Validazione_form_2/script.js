@@ -80,3 +80,17 @@ function convalidaSelectTipologia(){
         return false;
     }
 }
+
+/**
+ * Funzione per convalidare l'input della data
+ * @return {boolean}
+ */
+function convalidaData(){
+    let data = document.getElementById("selectData").value;
+
+    if (data !== ""){
+        return true;
+    }else{
+        return false;
+    }
+}
