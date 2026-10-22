@@ -151,10 +151,31 @@ function convalidaCheckboxERadio(nameCheckbox){
  * @return {boolean}
  */
 function convalidaFile(){
-    let file = document.getElementById("inputFile").value;
+    let file = document.getElementById("inputFile");
 
     if (file && file.files.length){
         return true;
+    }else{
+        return false;
+    }
+}
+
+/**
+ * Funzione per convalidare il caricamento di un file immagine.<br>
+ * Files supportati: *.jpeg, *.jpg, *.png
+ * @return {boolean}
+ */
+function convalidaFileImmagine(){
+    let fileImmagine = document.getElementById("inputImmagine");
+
+    if (fileImmagine && fileImmagine.files.length){
+        let file = fileImmagine.files[0];
+
+        if (file.type === "image/jpeg" || file.type === "image/png"){
+            return true;
+        }else{
+            return false;
+        }
     }else{
         return false;
     }
