@@ -180,3 +180,18 @@ function convalidaFileImmagine(){
         return false;
     }
 }
+
+/**
+ * Funzione per mostrare gli errori nei campi sbagliati con un messaggio di errore personalizzato
+ * @param idCampo ID del campo input HTML
+ * @param idSpan ID dello span associato al campo di input
+ * @param msgErrore Messaggio di errore personalizzato in base al campo di input
+ */
+function mostraErroreCampo(idCampo, idSpan, msgErrore){
+    let campoInput = document.getElementById(idCampo);
+    let span = document.getElementById(idSpan);
+
+    span.textContent = msgErrore;
+    span.style.display = 'block';
+    campoInput.style.borderColor = '#ff0000';
+}
