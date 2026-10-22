@@ -145,3 +145,17 @@ function convalidaCheckboxERadio(nameCheckbox){
         return false;
     }
 }
+
+/**
+ * Funzione per convalidare la presenza di un file
+ * @return {boolean}
+ */
+function convalidaFile(){
+    let file = document.getElementById("inputFile").value;
+
+    if (file && file.files.length){
+        return true;
+    }else{
+        return false;
+    }
+}
