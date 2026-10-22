@@ -195,3 +195,16 @@ function mostraErroreCampo(idCampo, idSpan, msgErrore){
     span.style.display = 'block';
     campoInput.style.borderColor = '#ff0000';
 }
+
+/**
+ * Funzioner per nascondere i messaggi di errore
+ * @param idCampo ID del campo input HTML
+ * @param idSpan ID dello span associato al campo di input
+ */
+function nascondiErroreCampo(idCampo, idSpan){
+    let campoInput = document.getElementById(idCampo);
+    let span = document.getElementById(idSpan);
+
+    span.style.display = 'none';
+    campoInput.style.borderColor = '#cad4e0';
+}
