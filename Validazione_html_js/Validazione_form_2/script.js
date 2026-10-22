@@ -108,3 +108,18 @@ function convalidaImporto(){
         return false;
     }
 }
+
+/**
+ * Funzione per convalidare la percentuale inserita.<br>
+ * La percentuale è un numero intero
+ * @return {boolean}
+ */
+function convalidaPercentuale(){
+    let percentuale = document.getElementById("inputPercentuale").value;
+
+    if (percentuale !== "" && percentuale > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
