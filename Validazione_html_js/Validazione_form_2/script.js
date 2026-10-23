@@ -208,3 +208,17 @@ function nascondiErroreCampo(idCampo, idSpan){
     span.style.display = 'none';
     campoInput.style.borderColor = '#cad4e0';
 }
+
+function convalidaForm(e){
+    e.preventDefault(); // Evita di ricaricare la pagina
+
+    let erroriPresenti = false;
+
+    if (convalidaCampoTesto("inputTesto")){
+        mostraErroreCampo("inputTesto", "msgErrTxt", "Devi compilare questo campo!");
+        erroriPresenti = true;
+    }else{
+        nascondiErroreCampo("inputTesto", "msgErrTxt");
+    }
+
+}
