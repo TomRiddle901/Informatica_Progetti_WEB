@@ -214,11 +214,17 @@ function convalidaForm(e){
 
     let erroriPresenti = false;
 
-    if (convalidaCampoTesto("inputTesto")){
+    if (!convalidaCampoTesto("inputTesto")){
         mostraErroreCampo("inputTesto", "msgErrTxt", "Devi compilare questo campo!");
         erroriPresenti = true;
     }else{
         nascondiErroreCampo("inputTesto", "msgErrTxt");
     }
 
+    if (!convalidaInputNumerico()){
+        mostraErroreCampo("inputNumerico", "msgErrNum1");
+        erroriPresenti = true;
+    }else{
+        nascondiErroreCampo("inputNumerico", "msgErrNum1");
+    }
 }
