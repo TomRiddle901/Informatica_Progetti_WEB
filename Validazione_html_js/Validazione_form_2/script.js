@@ -310,8 +310,16 @@ function convalidaForm(e){
     if (!convalidaCheckboxERadio("checkboxFieldset")){
         mostraErroreCampo("checkbox1");
         mostraErroreCampo("checkbox2", "msgErrFieldCheckbox", "Devi selezionare almeno 1 opzione!");
+        erroriPresenti = true;
     }else {
         nascondiErroreCampo("checkbox1");
         nascondiErroreCampo("checkbox2", "msgErrFieldCheckbox");
+    }
+
+    if (!convalidaFile()){
+        mostraErroreCampo("inputFile", "msgErrInFile", "Devi inserire almeno 1 file");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("inputFile", "msgErrInFile");
     }
 }
