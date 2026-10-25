@@ -241,4 +241,11 @@ function convalidaForm(e){
     }else{
         nascondiErroreCampo("inputEmail", "msgErrEmail");
     }
+
+    if (!convalidaSelectTipologia()){
+        mostraErroreCampo("selectTipologia", "msgErrSelTipologia", "Devi selezionare una tipologia!");
+        erroriPresenti = true;
+    }else{
+        nascondiErroreCampo("selectTipologia", "msgErrSelTipologia");
+    }
 }
