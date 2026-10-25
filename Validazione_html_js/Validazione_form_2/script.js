@@ -269,4 +269,11 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("inputPercentuale", "msgErrPercentuale");
     }
+
+    if (!convalidaCampoTesto("inputTestoAggiuntivo")){
+        mostraErroreCampo("inputTestoAggiuntivo", "msgErrTxtAgg", "Devi compilare questo campo!");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("inputTestoAggiuntivo", "msgErrTxtAgg");
+    }
 }
