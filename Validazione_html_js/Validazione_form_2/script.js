@@ -19,9 +19,9 @@ function convalidaCampoTesto(idCampo){
     let testo = document.getElementById(idCampo).value;
 
     if (testo !== ""){
-        return false;
-    }else {
         return true;
+    }else {
+        return false;
     }
 }
 
@@ -46,7 +46,7 @@ function convalidaInputNumerico(){
 function convalidaInputNumerico5Cifre(){
     let campoNumerico = document.getElementById("inputNumerico5Cifre").value;
 
-    if (campoNumerico.length === 0 || campoNumerico < 0 || campoNumerico > 99999){
+    if (campoNumerico.length === 0 || campoNumerico.length > 5 || campoNumerico < 0 || campoNumerico > 99999){
         return false;
     }else {
         return true;
@@ -102,7 +102,7 @@ function convalidaData(){
 function convalidaImporto(){
     let importo = document.getElementById("inputImporto").value;
 
-    if (importo !== "" && importo > 0){
+    if (importo !== "" && importo >= 0){
         return true;
     }else{
         return false;
@@ -117,7 +117,7 @@ function convalidaImporto(){
 function convalidaPercentuale(){
     let percentuale = document.getElementById("inputPercentuale").value;
 
-    if (percentuale !== "" && percentuale > 0){
+    if (percentuale !== "" && percentuale >= 0 && percentuale <= 100){
         return true;
     }else{
         return false;
@@ -191,9 +191,13 @@ function mostraErroreCampo(idCampo, idSpan, msgErrore){
     let campoInput = document.getElementById(idCampo);
     let span = document.getElementById(idSpan);
 
-    span.textContent = msgErrore;
-    span.style.display = 'block';
-    campoInput.style.borderColor = '#ff0000';
+    if (span) {
+        span.textContent = msgErrore;
+        span.style.display = 'block';
+    }
+    if (campoInput) {
+        campoInput.style.borderColor = '#ff0000';
+    }
 }
 
 /**
@@ -205,8 +209,12 @@ function nascondiErroreCampo(idCampo, idSpan){
     let campoInput = document.getElementById(idCampo);
     let span = document.getElementById(idSpan);
 
-    span.style.display = 'none';
-    campoInput.style.borderColor = '#cad4e0';
+    if (span) {
+        span.style.display = 'none';
+    }
+    if (campoInput) {
+        campoInput.style.borderColor = '#cad4e0';
+    }
 }
 
 function convalidaForm(e){
@@ -225,28 +233,28 @@ function convalidaForm(e){
         mostraErroreCampo("inputNumerico", "msgErrNum1", "Campo vuoto o valori inseriti non corretti!");
         erroriPresenti = true;
     }else{
-        nascondiErroreCampo("inputNumerico", "msgErrNum1", "Campo vuoto o valori inseriti non corretti");
+        nascondiErroreCampo("inputNumerico", "msgErrNum1");
     }
 
     if (!convalidaInputNumerico5Cifre()){
         mostraErroreCampo("inputNumerico5Cifre", "msgErrNum2", "Campo vuoto o valori inseriti non corretti");
         erroriPresenti = true;
     }else{
-        nascondiErroreCampo("inputNumerico5Cifre", "msdErrNum2");
+        nascondiErroreCampo("inputNumerico5Cifre", "msgErrNum2");
     }
 
     if (!convalidaEmail()){
         mostraErroreCampo("inputEmail", "msgErrMail", "Email non inserita o non corretta!");
         erroriPresenti = true;
     }else{
-        nascondiErroreCampo("inputEmail", "msgErrEmail");
+        nascondiErroreCampo("inputEmail", "msgErrMail");
     }
 
     if (!convalidaSelectTipologia()){
-        mostraErroreCampo("selectTipologia", "msgErrSelTipologia", "Devi selezionare una tipologia!");
+        mostraErroreCampo("selectTipologia", "msgErrSel1", "Devi selezionare una tipologia!");
         erroriPresenti = true;
     }else{
-        nascondiErroreCampo("selectTipologia", "msgErrSelTipologia");
+        nascondiErroreCampo("selectTipologia", "msgErrSel1");
     }
 
     if (!convalidaData()){
@@ -288,7 +296,7 @@ function convalidaForm(e){
         mostraErroreCampo("checkboxIsolata", "msgErrCheckIsolata", "Devi selezionare questo campo");
         erroriPresenti = true;
     }else {
-        nascondiErroreCampo("checkbocIsolata", "msgErrCheckIsolata");
+        nascondiErroreCampo("checkboxIsolata", "msgErrCheckIsolata");
     }
 
     if (!convalidaCheckboxERadio("toggleIsolato")){
@@ -333,12 +341,14 @@ function convalidaForm(e){
     if (erroriPresenti){
         mostraErroreCampo("inviaFormBtn", "msgErrGenerale", "Impossibile inviare il form, correggere gli errori e riprovare!");
     }else {
-        erroriPresenti = false;
         nascondiErroreCampo("inviaFormBtn", "msgErrGenerale");
         document.getElementById("formJs").reset();
     }
 }
 
-document.addEventListener("click", function(event){
-    convalidaForm(event);
-});
+let formJs = document.getElementById("formJs");
+if (formJs) {
+    formJs.addEventListener("submit", function(event){
+        convalidaForm(event);
+    });
+}
