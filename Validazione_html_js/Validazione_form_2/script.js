@@ -338,3 +338,7 @@ function convalidaForm(e){
         document.getElementById("formJs").reset();
     }
 }
+
+document.addEventListener("click", function(event){
+    convalidaForm(event);
+});
