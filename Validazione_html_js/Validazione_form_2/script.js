@@ -306,4 +306,12 @@ function convalidaForm(e){
         nascondiErroreCampo("radio1");
         nascondiErroreCampo("radio2", "msgErrFieldRadio");
     }
+
+    if (!convalidaCheckboxERadio("checkboxFieldset")){
+        mostraErroreCampo("checkbox1");
+        mostraErroreCampo("checkbox2", "msgErrFieldCheckbox", "Devi selezionare almeno 1 opzione!");
+    }else {
+        nascondiErroreCampo("checkbox1");
+        nascondiErroreCampo("checkbox2", "msgErrFieldCheckbox");
+    }
 }
