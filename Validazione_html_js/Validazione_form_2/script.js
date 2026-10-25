@@ -329,4 +329,12 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("inputImmagine", "msgErrInImmagine");
     }
+
+    if (erroriPresenti){
+        mostraErroreCampo("inviaFormBtn", "msgErrGenerale", "Impossibile inviare il form, correggere gli errori e riprovare!");
+    }else {
+        erroriPresenti = false;
+        nascondiErroreCampo("inviaFormBtn", "msgErrGenerale");
+        document.getElementById("formJs").reset();
+    }
 }
