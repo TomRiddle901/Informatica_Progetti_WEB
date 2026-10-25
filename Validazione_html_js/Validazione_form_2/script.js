@@ -72,7 +72,7 @@ function convalidaEmail(){
  * @return {boolean}
  */
 function convalidaSelectTipologia(){
-    let elementoSelezionato = document.getElementById("selectTipo").value;
+    let elementoSelezionato = document.getElementById("selectTipologia").value;
 
     if (elementoSelezionato !== ""){
         return true;
