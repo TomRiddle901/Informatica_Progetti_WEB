@@ -262,4 +262,11 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("inputImporto", "msgErrImporto");
     }
+
+    if (!convalidaPercentuale()){
+        mostraErroreCampo("inputPercentuale", "msgErrPercentuale", "Devi inserire una percentuale valida");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("inputPercentuale", "msgErrPercentuale");
+    }
 }
