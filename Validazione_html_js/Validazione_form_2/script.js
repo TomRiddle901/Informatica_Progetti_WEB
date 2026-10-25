@@ -290,4 +290,11 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("checkbocIsolata", "msgErrCheckIsolata");
     }
+
+    if (!convalidaCheckboxERadio("toggleIsolato")){
+        mostraErroreCampo("toggleIsolato", "msgErrToggIsolato", "Devi selezionare questo campo");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("toggleIsolato", "msgErrToggIsolato");
+    }
 }
