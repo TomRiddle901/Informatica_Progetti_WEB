@@ -126,11 +126,11 @@ function convalidaPercentuale(){
 
 /**
  * Funzione per convalidare le checkbox e i campi radio utilizzando il nome
- * @param nameCheckbox Nome della checkbox (tag <name>)
+ * @param nomeCampo Nome della checkbox (tag <name>)
  * @return {boolean}
  */
-function convalidaCheckboxERadio(idCampo){
-    let campo = document.getElementsByName(idCampo);
+function convalidaCheckboxERadio(nomeCampo){
+    let campo = document.getElementsByName(nomeCampo);
     let selezionati = 0;
 
     for (let i = 0; i < campo.length; i++){
@@ -296,5 +296,14 @@ function convalidaForm(e){
         erroriPresenti = true;
     }else {
         nascondiErroreCampo("toggleIsolato", "msgErrToggIsolato");
+    }
+
+    if (!convalidaCheckboxERadio("radio")){
+        mostraErroreCampo("radio1");
+        mostraErroreCampo("radio2", "msgErrFieldRadio", "Devi selezionare almeno 1 opzione!");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("radio1");
+        nascondiErroreCampo("radio2", "msgErrFieldRadio");
     }
 }
