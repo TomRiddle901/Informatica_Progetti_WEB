@@ -129,12 +129,12 @@ function convalidaPercentuale(){
  * @param nameCheckbox Nome della checkbox (tag <name>)
  * @return {boolean}
  */
-function convalidaCheckboxERadio(nameCheckbox){
-    let checkbox = document.getElementsByName(nameCheckbox);
+function convalidaCheckboxERadio(idCampo){
+    let campo = document.getElementsByName(idCampo);
     let selezionati = 0;
 
-    for (let i = 0; i < checkbox.length; i++){
-        if (checkbox[i].checked){
+    for (let i = 0; i < campo.length; i++){
+        if (campo[i].checked){
             selezionati++;
         }
     }
@@ -282,5 +282,12 @@ function convalidaForm(e){
         erroriPresenti = true;
     }else {
         nascondiErroreCampo("inputComuneResidenza", "msgErrComune");
+    }
+
+    if (!convalidaCheckboxERadio("checkboxIsolata")){
+        mostraErroreCampo("checkboxIsolata", "msgErrCheckIsolata", "Devi selezionare questo campo");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("checkbocIsolata", "msgErrCheckIsolata");
     }
 }
