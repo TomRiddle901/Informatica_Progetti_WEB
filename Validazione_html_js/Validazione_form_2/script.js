@@ -225,6 +225,20 @@ function convalidaForm(e){
         mostraErroreCampo("inputNumerico", "msgErrNum1");
         erroriPresenti = true;
     }else{
-        nascondiErroreCampo("inputNumerico", "msgErrNum1");
+        nascondiErroreCampo("inputNumerico", "msgErrNum1", "Campo vuoto o valori inseriti non corretti");
+    }
+
+    if (!convalidaInputNumerico5Cifre()){
+        mostraErroreCampo("inputNumerico5Cifre", "msgErrNum2", "Campo vuoto o valori inseriti non corretti");
+        erroriPresenti = true;
+    }else{
+        nascondiErroreCampo("inputNumerico5Cifre", "msdErrNum2");
+    }
+
+    if (!convalidaEmail()){
+        mostraErroreCampo("inputEmail", "msgErrEmail", "Email non inserita o non corretta!");
+        erroriPresenti = true;
+    }else{
+        nascondiErroreCampo("inputEmail", "msgErrEmail");
     }
 }
