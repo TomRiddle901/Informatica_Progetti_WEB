@@ -322,4 +322,11 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("inputFile", "msgErrInFile");
     }
+
+    if (!convalidaFileImmagine()){
+        mostraErroreCampo("inputImmagine", "msgErrInImmagine", "File immagine non inserito o formato immagine sbagliato!");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("inputImmagine", "msgErrInImmagine");
+    }
 }
