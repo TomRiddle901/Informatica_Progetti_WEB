@@ -236,7 +236,7 @@ function convalidaForm(e){
     }
 
     if (!convalidaEmail()){
-        mostraErroreCampo("inputEmail", "msgErrEmail", "Email non inserita o non corretta!");
+        mostraErroreCampo("inputEmail", "msgErrMail", "Email non inserita o non corretta!");
         erroriPresenti = true;
     }else{
         nascondiErroreCampo("inputEmail", "msgErrEmail");
