@@ -276,4 +276,11 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("inputTestoAggiuntivo", "msgErrTxtAgg");
     }
+
+    if (!convalidaCampoTesto("inputComuneResidenza")){
+        mostraErroreCampo("inputComuneResidenza", "msgErrComune", "Devi compilare queato campo");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("inputComuneResidenza", "msgErrComune");
+    }
 }
