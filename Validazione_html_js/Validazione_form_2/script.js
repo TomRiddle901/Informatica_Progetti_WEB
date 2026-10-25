@@ -248,4 +248,11 @@ function convalidaForm(e){
     }else{
         nascondiErroreCampo("selectTipologia", "msgErrSelTipologia");
     }
+
+    if (!convalidaData()){
+        mostraErroreCampo("selectData", "msgErrSelData", "Devi selezionare una data!");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("selectData", "msgErrSelData");
+    }
 }
