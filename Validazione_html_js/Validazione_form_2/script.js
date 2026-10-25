@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 function convalidaCampoTesto(idCampo){
     let testo = document.getElementById(idCampo).value;
 
-    if (testo.isEmpty()){
+    if (testo !== ""){
         return false;
     }else {
         return true;
@@ -222,7 +222,7 @@ function convalidaForm(e){
     }
 
     if (!convalidaInputNumerico()){
-        mostraErroreCampo("inputNumerico", "msgErrNum1");
+        mostraErroreCampo("inputNumerico", "msgErrNum1", "Campo vuoto o valori inseriti non corretti!");
         erroriPresenti = true;
     }else{
         nascondiErroreCampo("inputNumerico", "msgErrNum1", "Campo vuoto o valori inseriti non corretti");
@@ -299,20 +299,20 @@ function convalidaForm(e){
     }
 
     if (!convalidaCheckboxERadio("radio")){
-        mostraErroreCampo("radio1");
+        mostraErroreCampo("radio1", "msgErrFieldRadio", "Devi selezionare almeno 1 opzione!");
         mostraErroreCampo("radio2", "msgErrFieldRadio", "Devi selezionare almeno 1 opzione!");
         erroriPresenti = true;
     }else {
-        nascondiErroreCampo("radio1");
+        nascondiErroreCampo("radio1", "msgErrFieldRadio");
         nascondiErroreCampo("radio2", "msgErrFieldRadio");
     }
 
     if (!convalidaCheckboxERadio("checkboxFieldset")){
-        mostraErroreCampo("checkbox1");
+        mostraErroreCampo("checkbox1", "msgErrFieldCheckbox", "Devi selezionare almeno 1 opzione!");
         mostraErroreCampo("checkbox2", "msgErrFieldCheckbox", "Devi selezionare almeno 1 opzione!");
         erroriPresenti = true;
     }else {
-        nascondiErroreCampo("checkbox1");
+        nascondiErroreCampo("checkbox1", "msgErrFieldCheckbox");
         nascondiErroreCampo("checkbox2", "msgErrFieldCheckbox");
     }
 
