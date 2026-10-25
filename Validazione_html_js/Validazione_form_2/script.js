@@ -255,4 +255,11 @@ function convalidaForm(e){
     }else {
         nascondiErroreCampo("selectData", "msgErrSelData");
     }
+
+    if (!convalidaImporto()){
+        mostraErroreCampo("inputImporto", "msgErrImporto", "Devi inserire un importo valido!");
+        erroriPresenti = true;
+    }else {
+        nascondiErroreCampo("inputImporto", "msgErrImporto");
+    }
 }
