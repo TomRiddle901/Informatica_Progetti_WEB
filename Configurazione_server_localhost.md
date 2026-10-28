@@ -24,7 +24,7 @@ sudo nano /etc/httpd/conf.d/nome_sito.conf
 ### 2. Configurare il VirtualHost
 
 Inserire il seguente contenuto, sostituendo `nome_utente` con il proprio nome utente Linux e `Cartella_del_sito` con il nome della cartella del progetto.<br>
-Nel caso la pagina HTML principale non si chiama `index.php` sostituire `DirectoryIndex index.html` con il nome del file HTML.
+Nel caso la pagina HTML principale non si chiama `index.php` o `index.html` sostituire `DirectoryIndex index.html` con il nome del file HTML.
 
 ```apache
 <VirtualHost 127.0.0.1:80>
