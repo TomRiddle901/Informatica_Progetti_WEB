@@ -1,13 +1,19 @@
-<h1>Prima pagina PHP</h1>
-<?php
-    $cognome = "Baudo";
-    $nome = "Pippo";
-    $eta = 20;
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+</head>
+<body>
+    <h1>Form</h1>
+    <form id="formTestPhp" method="post" action="test.php">
+        <label for="inputPrimoNumero" id="inputPrimoNumeroLbl">Primo numero: </label>
+        <input type="number" id="inputPrimoNumero" name="num1">
 
-    print("Il mio nome è: <i>" . $nome . "</i> il mio cognome è: " . $cognome . " la mia età è: " . $eta);
+        <label for="inputSecondoNumero" id="inputSecondoNumeroLbl">Secondo numero: </label>
+        <input type="number" id="inputSecondoNumero" name="num2">
 
-    if ($eta >= 20){
-        print("<br>Sei vecchio " . $cognome);
-    }else{
-        print("<br>Sei giovane " . $cognome);
-    }
+        <button type="submit">Calcola</button>
+    </form>
+</body>
