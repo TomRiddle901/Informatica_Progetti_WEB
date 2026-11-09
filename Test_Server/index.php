@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Form</h1>
-    <form id="formTestPhp" method="post" action="caclola.php">
+    <form id="formTestPhp" method="GET" action="caclola.php">
         <label for="inputPrimoNumero" id="inputPrimoNumeroLbl">Primo numero: </label>
         <input type="number" id="inputPrimoNumero" name="num1"><br>
 
