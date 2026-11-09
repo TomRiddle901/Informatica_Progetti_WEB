@@ -7,13 +7,13 @@
 </head>
 <body>
     <h1>Form</h1>
-    <form id="formTestPhp" method="post" action="test.php">
+    <form id="formTestPhp" method="post" action="caclola.php">
         <label for="inputPrimoNumero" id="inputPrimoNumeroLbl">Primo numero: </label>
-        <input type="number" id="inputPrimoNumero" name="num1">
+        <input type="number" id="inputPrimoNumero" name="num1"><br>
 
         <label for="inputSecondoNumero" id="inputSecondoNumeroLbl">Secondo numero: </label>
-        <input type="number" id="inputSecondoNumero" name="num2">
+        <input type="number" id="inputSecondoNumero" name="num2"><br>
 
-        <button type="submit">Calcola</button>
+        <button type="submit" value="calcola">Calcola</button>
     </form>
 </body>
