@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Pagina di test del server</title>
-</head>
-<body>
-    <h1>Test Server</h1>
-    <?php
-        echo "<i>Prova di PHP dentro l'HTML</i>";
-    ?>
-</body>
-</html>
+<h1>Prima pagina PHP</h1>
+<?php
+    $cognome = "Baudo";
+    $nome = "Pippo";
+
+    echo "Il mio nome è: ".$nome;
+    echo "Il mio cognome è: " . $cognome;
