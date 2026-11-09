@@ -2,6 +2,6 @@
 <?php
     $cognome = "Baudo";
     $nome = "Pippo";
+    $eta = 20;
 
-    echo "Il mio nome è: ".$nome;
-    echo "Il mio cognome è: " . $cognome;
+    echo "Il mio nome è: ".$nome . " il mio cognome è: " . $cognome . " la mia età è: " . $eta;
