@@ -3,21 +3,27 @@
     $numero2 = $_REQUEST["num2"];
 
     if ($numero1 > 10){
-        echo "Numero superiore";
+        echo "Numero superiore<br>";
     }else{
-        echo "Numero inferiore";
+        echo "Numero inferiore<br>";
     }
 
     if (isset($numero3)){
-        echo "Nuemero inviato";
+        echo "Nuemero inviato<br>";
     }else{
-        echo "Numero non inviato";
+        echo "Numero non inviato<br>";
     }
 
     if (empty($numero3)){
-        echo "Numero vuoto";
+        echo "Numero vuoto<br>";
     }else{
-        echo "Nuemro peino";
+        echo "Nuemro peino<br>";
+    }
+
+    if (is_numeric($numero1)){
+        echo "è un numero<br>";
+    }else{
+        echo "non è un numero<br>";
     }
 
     echo "Valore numero 1: $numero1 <br> Valore numero 2: $numero2";
