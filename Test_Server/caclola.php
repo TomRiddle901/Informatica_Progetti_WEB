@@ -8,4 +8,10 @@
         echo "Numero inferiore";
     }
 
+    if (isset($numero1)){
+        echo "Nuemero inviato";
+    }else{
+        echo "Numero non inviato";
+    }
+
     echo "Valore numero 1: $numero1 <br> Valore numero 2: $numero2";
