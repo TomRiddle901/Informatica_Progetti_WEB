@@ -26,4 +26,7 @@
         echo "non è un numero<br>";
     }
 
+    $stato = ($numero1 >= 18) ? "Maggiorenne" : "Minorenne"; // Operatore ternario
+    echo $stato . "<br>";
+
     echo "Valore numero 1: $numero1 <br> Valore numero 2: $numero2";
