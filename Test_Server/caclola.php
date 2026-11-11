@@ -50,11 +50,11 @@
     $tabellinaDaCalcolare = $_REQUEST["inputTabellina"];
 
     if (is_numeric($tabellinaDaCalcolare)){
-        print("<table>");
+        print("<table style='border: 1px solid #000000;'>");
         for ($i = 0; $i < 11; $i++){
             $risultato = $tabellinaDaCalcolare * $i;
             print("<tr>
-                    <td>$tabellinaDaCalcolare x $i = <strong>$risultato</strong></td>
+                    <td style='border-bottom: 1px solid #000000'>$tabellinaDaCalcolare x $i = <strong>$risultato</strong></td>
                     </tr>");
         }
         print("</table>");

@@ -15,7 +15,7 @@
         <input type="number" id="inputSecondoNumero" name="num2"><br>
 
         <label for="inputTabellina" id="inputTabellinaLbl">Scrivi la tabellina che vuoi visualizzare: </label>
-        <input type="text" id="inputTabellina" name="inputTabellina">
+        <input type="text" id="inputTabellina" name="inputTabellina"><br>
 
         <button type="submit" value="calcola">Calcola</button>
     </form>
