@@ -30,3 +30,19 @@
 
     $stato = ($numero1 >= 18) ? "Maggiorenne" : "Minorenne"; // Operatore ternario
     echo $stato . "<br>";
+
+    switch ($numero1){
+        case 1:
+            echo "Lunedì<br>";
+            break;
+        case 2:
+            echo "Marted'<br>";
+            break;
+        case 6:
+        case 7:
+            echo "Domenica<br>";
+            break;
+        default:
+            echo "Altro giorno<br>";
+            break;
+    }
