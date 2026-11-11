@@ -46,3 +46,18 @@
             echo "Altro giorno<br>";
             break;
     }
+
+    $tabellinaDaCalcolare = $_REQUEST["inputTabellina"];
+
+    if (is_numeric($tabellinaDaCalcolare)){
+        print("<table>");
+        for ($i = 0; $i < 11; $i++){
+            $risultato = $tabellinaDaCalcolare * $i;
+            print("<tr>
+                    <td>$tabellinaDaCalcolare x $i = <strong>$risultato</strong></td>
+                    </tr>");
+        }
+        print("</table>");
+    }else{
+        echo "<strong>Il valore inserito non è un numero.</strong>";
+    }
