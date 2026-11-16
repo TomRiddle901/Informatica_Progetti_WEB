@@ -4,6 +4,15 @@ Lista di tutti i link delle pagine localhost esistnti (files .conf)
 
 ---
 
+### Form_Registrazione_PHP
+Link: http://form_registrazione_php.localhost <br>
+File conf:
+```bash
+/etc/httpd/conf.d/form_registrazione_php.conf
+```
+
+---
+
 ### Test_Server
 Link: http://test_server.localhost <br>
 File conf:
