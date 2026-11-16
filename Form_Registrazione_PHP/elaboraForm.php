@@ -25,6 +25,7 @@ if (file_exists($nomeFile)){
     $filePrecedente = json_decode(file_get_contents($nomeFile), true);
 }
 
-// salva i dati all'interno del JSON
+// Salva i dati all'interno del JSON vecchio
 $filePrecedente[] = $dati;
 $anagrafica = json_encode($filePrecedente, JSON_PRETTY_PRINT);
+file_put_contents($nomeFile, $anagrafica); // Scrive il file aggiornato
