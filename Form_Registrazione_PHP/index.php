@@ -15,6 +15,7 @@
     <label for="inputConfermaEmail" id="inputConfermaEmailLbl">Conferma Email:</label>
     <input type="email" id="inputConfermaEmail">
     <label for="inputDataNascita" id="inputDataNascita">Data di nascita:</label>
-
+    <input type="date" id="inputDataNascita"><br>
+    <label
 </body>
 </html>
