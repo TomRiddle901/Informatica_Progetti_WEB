@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Registati</h1>
-    <form id="formregistrazione" method="post">
+    <form id="formregistrazione" method="post" action="elaboraForm.php">
         <label for="inputNome" id="inputNomeLbl">Nome:</label>
         <input type="text" id="inputNome" required><br>
 
