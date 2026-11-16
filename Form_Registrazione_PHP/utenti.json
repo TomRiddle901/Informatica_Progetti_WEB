@@ -1,0 +1,9 @@
+[
+    {
+        "nome": "Test",
+        "cognome": "JSON",
+        "email": "testemail@test.it",
+        "telefono": "1234567890",
+        "dataNascita": "2026-11-16"
+    }
+]
