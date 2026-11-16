@@ -4,11 +4,11 @@ if(!isset($_POST["nome"]) && !isset($_POST["cognome"]) && !isset($_POST["email"]
     exit(1);
 }
 
-$nome = $_POST["nome"];
-$cognome = $_POST["cognome"];
-$email = $_POST["email"];
-$tel = $_POST["telefono"];
-$dataNascita = $_POST["dataNascita"];
+$nome = $_POST["inputNome"];
+$cognome = $_POST["inputCognome"];
+$email = $_POST["inutEmail"];
+$tel = $_POST["inputNumeroTelefono"];
+$dataNascita = $_POST["inputDataNascita"];
 
 $dati = ["nome" => $nome,
         "cognome" => $cognome,
@@ -18,6 +18,8 @@ $dati = ["nome" => $nome,
 
 $nomeFile = "utenti.json";
 
+// Controlla se esiste un file
 if (file_exists($nomeFile)){
+    // Se esiste, salva il vecchio contenuto
     $filePrecedente = json_decode(file_get_contents($nomeFile), true);
 }
