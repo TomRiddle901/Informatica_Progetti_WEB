@@ -23,3 +23,7 @@ if (file_exists($nomeFile)){
     // Se esiste, salva il vecchio contenuto
     $filePrecedente = json_decode(file_get_contents($nomeFile), true);
 }
+
+// salva i dati all'interno del JSON
+$filePrecedente[] = $dati;
+$anagrafica = json_encode($filePrecedente, JSON_PRETTY_PRINT);
