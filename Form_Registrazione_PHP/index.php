@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Registati</h1>
-    <form id="formregistrazione" method="get">
+    <form id="formregistrazione" method="post">
         <label for="inputNome" id="inputNomeLbl">Nome:</label>
         <input type="text" id="inputNome" required><br>
 
