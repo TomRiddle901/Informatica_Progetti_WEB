@@ -1,5 +1,6 @@
 <?php
-if(!isset($_POST["nome"]) && !isset($_POST["cognome"]) && !isset($_POST["email"]) && !isset($_POST["password"])){
+if(!isset($_POST["inputNome"]) && !isset($_POST["inputCognome"]) &&
+    !isset($_POST["inputEmail"]) && !isset($_POST["inputPassword"])){
     echo "I dati inseriti non sono stati correttamente inviati";
     exit(1);
 }
