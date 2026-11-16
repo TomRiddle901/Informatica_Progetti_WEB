@@ -21,6 +21,7 @@
         <input type="tel" id="inputNumeroTelefono"><br>
         <label for="inputPassword" id="inputPasswordLbl">Password:</label>
         <input type="password" id="inputPassword"><br>
+        <button type="submit" id="inviaRegistrazioneBtn">Registrati</button>
     </form>
 </body>
 </html>
