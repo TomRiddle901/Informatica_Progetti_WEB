@@ -6,7 +6,7 @@ if(!isset($_POST["nome"]) && !isset($_POST["cognome"]) && !isset($_POST["email"]
 
 $nome = $_POST["inputNome"];
 $cognome = $_POST["inputCognome"];
-$email = $_POST["inutEmail"];
+$email = $_POST["inputEmail"];
 $tel = $_POST["inputNumeroTelefono"];
 $dataNascita = $_POST["inputDataNascita"];
 
