@@ -41,7 +41,19 @@
                     break;
 
                 case "-":
+                    $risultatoOperazione = $primoNumero - $secondoNumero;
+                    break;
 
+                case "*":
+                    $risultatoOperazione = $primoNumero * $secondoNumero;
+                    break;
+
+                case "/":
+                    $risultatoOperazione = $primoNumero / $secondoNumero;
+                    break;
+
+                default:
+                    break;
             }
         ?>
 
