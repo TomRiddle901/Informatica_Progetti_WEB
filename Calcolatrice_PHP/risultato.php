@@ -38,21 +38,26 @@
             switch ($operatore){
                 case "+":
                     $risultatoOperazione = $primoNumero + $secondoNumero;
+                    echo "Risltato dell'operazione: " . $risultatoOperazione . "<br>";
                     break;
 
                 case "-":
                     $risultatoOperazione = $primoNumero - $secondoNumero;
+                    echo "Risultato dell'operazione: " . $risultatoOperazione . "<br>";
                     break;
 
                 case "*":
                     $risultatoOperazione = $primoNumero * $secondoNumero;
+                    echo "RIsultato dell'operazione: " . $risultatoOperazione . "<br>";
                     break;
 
                 case "/":
                     $risultatoOperazione = $primoNumero / $secondoNumero;
+                    echo "Risultato dell'operazione: " . $risultatoOperazione . "<br>";
                     break;
 
                 default:
+                    echo "<p style='color: #ff0000'>Errore nel calcolo dell'operazione, l'operatore è corretto?</p>";
                     break;
             }
         ?>
