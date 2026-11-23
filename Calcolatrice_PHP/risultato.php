@@ -34,6 +34,9 @@
             <option value="/">/</option>
         </select><br>
 
+        <label for="inputSecondoNumero" id="inputSecondoNumeroLbl">Secondo numero:</label>
+        <input type="number" id="inputSecondoNumero" name="inputSecondoNumero"><br>
+
         <?php
             switch ($operatore){
                 case "+":
@@ -61,9 +64,6 @@
                     break;
             }
         ?>
-
-        <label for="inputSecondoNumero" id="inputSecondoNumeroLbl">Secondo numero:</label>
-        <input type="number" id="inputSecondoNumero" name="inputSecondoNumero"><br>
 
         <button type="submit" id="inviaForm">Invia Form</button>
     </form>
