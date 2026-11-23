@@ -55,8 +55,12 @@
                     break;
 
                 case "/":
-                    $risultatoOperazione = $primoNumero / $secondoNumero;
-                    echo "<p style='color: #00ff00'>Risultato dell'operazione: " . $risultatoOperazione . "</p><br>";
+                    if ($secondoNumero == 0){
+                        echo "<p style='color: #ff0000'>Divisione per 0!</p>";
+                    }else{
+                        $risultatoOperazione = $primoNumero / $secondoNumero;
+                        echo "<p style='color: #00ff00'>Risultato dell'operazione: " . $risultatoOperazione . "</p><br>";
+                    }
                     break;
 
                 default:
