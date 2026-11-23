@@ -4,6 +4,15 @@ Lista di tutti i link delle pagine localhost esistnti (files .conf)
 
 ---
 
+### Caclolo tra fattori di una tabellina
+Link: http://calcolo_fattori.localhost <br>
+File conf:
+```bash
+/etc/httpd/conf.d/calcolo_fattori.conf
+```
+
+---
+
 ### Controllo codice fiscale
 Link: http://controllo_codice_fiscale.localhost <br>
 File conf:
