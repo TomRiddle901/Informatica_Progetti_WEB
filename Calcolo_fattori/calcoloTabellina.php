@@ -22,12 +22,14 @@
         <input type="number" id="inputTabellina" name="inputTabellina" min="0" required><br>
 
         <nav>
-        <?php
-            for ($i = 0; $i < $tabellinaUtente; $i++){
-                $risultatoOperazione = $tabellinaUtente * $i;
-                echo "          <li>$tabellinaUtente * $i = $risultatoOperazione</li>";
-            }
-        ?>
+            <ul>
+                <?php
+                    for ($i = 0; $i < 11; $i++){
+                        $risultatoOperazione = $tabellinaUtente * $i;
+                        echo "<li>$tabellinaUtente * $i = $risultatoOperazione</li>";
+                    }
+                ?>
+            </ul>
         </nav>
 
         <button type="submit" id="inviaTabellina">Mostra tabellina</button>
