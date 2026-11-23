@@ -4,6 +4,13 @@ Lista di tutti i link delle pagine localhost esistnti (files .conf)
 
 ---
 
+### Somma degli array
+Link: http://somma_array.localhost
+File conf:
+```bash
+/etc/httpd/conf.d/somma_array.conf
+```
+
 ### Caclolo tra fattori di una tabellina
 Link: http://calcolo_fattori.localhost <br>
 File conf:
