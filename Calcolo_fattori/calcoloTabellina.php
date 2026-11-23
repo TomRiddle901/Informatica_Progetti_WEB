@@ -21,6 +21,15 @@
         <label for="inputTabellina" id="inputTabellinaLbl">Scegli la tabellina da visualizare</label>
         <input type="number" id="inputTabellina" name="inputTabellina" min="0" required><br>
 
+        <nav>
+        <?php
+            for ($i = 0; $i < $tabellinaUtente; $i++){
+                $risultatoOperazione = $tabellinaUtente * $i;
+                echo "          <li>$tabellinaUtente * $i = $risultatoOperazione</li>";
+            }
+        ?>
+        </nav>
+
         <button type="submit" id="inviaTabellina">Mostra tabellina</button>
     </form>
 </body>
