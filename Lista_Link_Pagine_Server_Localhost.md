@@ -4,6 +4,15 @@ Lista di tutti i link delle pagine localhost esistnti (files .conf)
 
 ---
 
+### Controllo codice fiscale
+Link: http://controllo_codice_fiscale.localhost <br>
+File conf:
+```bash
+/etc/httpd/conf.d/controllo_codice_fiscale.conf
+```
+
+---
+
 ### Calcolatrice_PHP
 Link: http://calcolatrice_php.localhost <br>
 File conf:
