@@ -41,22 +41,22 @@
             switch ($operatore){
                 case "+":
                     $risultatoOperazione = $primoNumero + $secondoNumero;
-                    echo "Risltato dell'operazione: " . $risultatoOperazione . "<br>";
+                    echo "<p style='color: #00ff00'>Risltato dell'operazione: " . $risultatoOperazione . "</p><br>";
                     break;
 
                 case "-":
                     $risultatoOperazione = $primoNumero - $secondoNumero;
-                    echo "Risultato dell'operazione: " . $risultatoOperazione . "<br>";
+                    echo "<p style='color: #00ff00'>Risultato dell'operazione: " . $risultatoOperazione . "</p><br>";
                     break;
 
                 case "*":
                     $risultatoOperazione = $primoNumero * $secondoNumero;
-                    echo "RIsultato dell'operazione: " . $risultatoOperazione . "<br>";
+                    echo "<p style='color: #00ff00'>RIsultato dell'operazione: " . $risultatoOperazione . "</p><br>";
                     break;
 
                 case "/":
                     $risultatoOperazione = $primoNumero / $secondoNumero;
-                    echo "Risultato dell'operazione: " . $risultatoOperazione . "<br>";
+                    echo "<p style='color: #00ff00'>Risultato dell'operazione: " . $risultatoOperazione . "</p><br>";
                     break;
 
                 default:
