@@ -4,6 +4,15 @@ Lista di tutti i link delle pagine localhost esistnti (files .conf)
 
 ---
 
+### Calcolatrice_PHP
+Link: http://calcolatrice_php.localhost <br>
+File conf:
+```bash
+/etc/httpd/conf.d/calcolatrice_php.conf
+```
+
+---
+
 ### Form_Registrazione_PHP
 Link: http://form_registrazione_php.localhost <br>
 File conf:
